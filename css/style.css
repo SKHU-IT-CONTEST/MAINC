@@ -1,10 +1,9 @@
 
 *{
     margin: 0px;
-
 }
 body{
-    background: url(best.jpeg) no-repeat center;
+    background: url(/Users/yeaseul/Desktop/contest/frontend/fe_part1/img/bgimg.jpeg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;   /*배경이미지 고정방식 */
     height: 100vh;
