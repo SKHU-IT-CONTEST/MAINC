@@ -15,37 +15,47 @@
 </head>
 
 <body>
-  <div id="back" a>
+  <div id="back"><!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
+    <!-- 맨 위에 제목 부분 -->
     <div id="header">
       <span id="head-in">성공회대학교 날씨제공 서비스: 쿠름이</span><button type="button" class="material-icons-outlined"
         style="font-size: 70px; text-align:center;  margin: 20px; background-color:transparent; border-color: transparent;">info_outline</button>
     </div>
-    <div id="weather-box">
-      <div class="text-box">
+    <!-- 맨 위에 제목 부분 -->
+    <!--part1 날씨 정보 박스-->
+     <div class="text-box">
         <p class="location">
-          <span class="material-icons"
-            style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
+        <span class="material-icons"
+        style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
             my_location
-          </span>
-          성공회대학교 현재 날씨
+        </span>
+            성공회대학교 현재 날씨
         </p>
-        <h2 class="temp" id="temperature">27 &#8451;</h2>
+        <div class="temp" id="temperature">
+            27 &#8451;
+        </div>
+        <!--날씨 아이콘-->
+          <img src="img/sun.svg" class="weather-icon">
+        <!--날씨 아이콘-->
         <p class="cloudy">
-          <span class="material-icons"
-            style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
+        <span class="material-icons"
+          style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
             wb_cloudy
-          </span>강수 확률 :
+        </span>강수 확률 :
         </p>
         <p class="water">
-          <span class="material-icons"
-            style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
+        <span class="material-icons"
+          style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
             water_drop
-          </span>습도 :
+        </span>습도 :
         </p>
-        <p class="skhu-turtle">회부기는 지금 undefined.</p>
+        <p class="skhu-turtle">
+            회부기는 지금 undefined.
+        </p>
       </div>
-      <div class="weather-icon"></div>
-      <div class="stu-respo"></div>
+      <div class="stu-respo">
+
+      </div>
     </div>
   </div>
 
