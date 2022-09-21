@@ -1,6 +1,12 @@
-
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
 *{
     margin: 0px;
+    font-family: 'SeoulNamsanM';
 }
 body{
     background: url(/Users/yeaseul/Desktop/contest/frontend/fe_part1/img/bgimg.jpeg) no-repeat center;
@@ -24,10 +30,18 @@ body{
 }
 #head-in{
     padding-top: 8px;
-    font-size: 50px;
+    font-size: 3em;
     font-family: "Jeju Gothic";
     margin: 20px;
 }
+.material-icons {
+    font-family: 'Material Icons';
+    position: relative;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  }
 .material-icons-outlined {
     font-family: 'Material Icons';
     position: relative;
@@ -35,6 +49,8 @@ body{
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
+    color: white;
+    text-shadow: 5px 5px 10px black;
   }
 .text-box{
     border-radius: 50px;
@@ -52,21 +68,22 @@ body{
 .temp{
     font-size: 90px;
     padding: 40px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
 }
 .cloudy{
     font-size: 40px;
-    font-weight: lighter;
     padding: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
 }
 .water{
     font-size: 40px;
-    font-weight: lighter;
     padding: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
 }
 .skhu-turtle{
     font-size: 40px;
-    font-weight: lighter;
     padding: 10px;
+
 }
 
 /* 파트3 버튼 스타일 */
@@ -79,3 +96,7 @@ body{
     color: plum;
 }
 /* 파트3 버튼 스타일 */
+
+    
+
+
