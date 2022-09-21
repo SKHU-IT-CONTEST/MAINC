@@ -1,7 +1,7 @@
 arr = [];
 var data = arr;
 
-
+// +버튼을 눌러 input박스를 생성
 function CreateButton() {
 	document.getElementById("plus-button").style.visibility = "hidden";
 
@@ -14,20 +14,20 @@ function CreateButton() {
 
 function TextBox() {
 
-	let answer = document.getElementById('answer').value;
-	if(answer == ""){
+	let answertemp = document.getElementById('answer').value;
+	if(answertemp == ""){
 		alert('응답을 적어주세요!');
 	}
 	
 	else{
 		var container = document.getElementById('container');// html에 있는 container id를 cont에 부여
-
 		
 		container.innerHTML = "<button id=\"answer-button\" class=\"button-style\"></button>";
 		var AnswerButton = document.getElementById('answer-button');
 		container.appendChild(AnswerButton);
 
-		var AnswerText = document.createTextNode(answer);
+		
+		var AnswerText = document.createTextNode(answertemp);
 		AnswerButton.appendChild(AnswerText);
 
 		var HeartText = document.createElement('heart');
@@ -35,10 +35,12 @@ function TextBox() {
 		HeartText.innerHTML = "♥";
 		AnswerButton.appendChild(HeartText);
 
-		document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
+		// document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
+		
 		document.getElementById("plus-button").style.visibility ='visible';
-		document.getElementById("answer").style.visibility = "hidden";
+		document.getElementById("answer").remove();
 
+		// 두 번째 버튼을 생성시 첫 번째 버튼이 사라지는 현상 해결해야함
 	}
 }
 //온도 fetch 이용해서 임의로 가져온것
@@ -49,3 +51,5 @@ fetch('http://152.67.207.160:32023/api/schoolNotice')
         const el = document.querySelector('#temperature')
         el.innerHTML=json[0].num
     })
+
+	
