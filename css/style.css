@@ -68,3 +68,14 @@ body{
     font-weight: lighter;
     padding: 10px;
 }
+
+/* 파트3 버튼 스타일 */
+.button-style {
+    background-color: white;
+    box-shadow: 0 10 50;
+}
+
+.heart-style {
+    color: plum;
+}
+/* 파트3 버튼 스타일 */
