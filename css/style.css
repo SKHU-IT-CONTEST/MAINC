@@ -58,6 +58,9 @@ body{
     padding: 40px 40px 40px 50px;
     margin: 20px;
     color: black;
+    float: left;
+    width: 87%;
+
 }
 .location{
     font-size: 40px;
@@ -69,19 +72,27 @@ body{
     font-size: 90px;
     padding: 40px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
+    width: fit-content;
+    margin: 20px;
 }
 .cloudy{
     font-size: 40px;
     padding: 10px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
+    margin: 20px;
 }
 .water{
     font-size: 40px;
     padding: 10px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
+    margin: 20px;
 }
 .skhu-turtle{
     font-size: 40px;
     padding: 10px;
+    margin: 20px;
     
+}
+.weater-icon{
+    display: inline;
 }
