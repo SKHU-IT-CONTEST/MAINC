@@ -102,6 +102,11 @@ body{
 .heart-style {
     color: plum;
 }
+.area-answer {
+    position: relative;
+    left: 5%;
+    top: auto;
+}
 /* 파트3 버튼 스타일 */
 
     
