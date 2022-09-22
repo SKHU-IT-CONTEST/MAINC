@@ -6,11 +6,16 @@
   <meta charset="UTF-8">
   <title>쿠름이</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/front-part_2.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sunflower&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <script src="js/button.js"></script>
+  <script src="js/schoolNotice.js"></script>
+  <script src="js/banner.js"></script>
+
+
 
 </head>
 
@@ -21,6 +26,17 @@
       <p id="head-in">성공회대학교 날씨제공 서비스: 쿠름이</p>
     </div>
     <!-- 맨 위에 제목 부분 -->
+
+    <!--part2 공지사항 박스 part2-->
+  <div class="rollingbanner">
+      <div class="title"><img src="img/noticeicon.svg" width="120" height="120" alt="날씨사진"></div>
+      <div class="wrap">
+          <ul>
+          </ul>
+      </div>
+  </div>
+     <!--part2 공지사항 박스 part2-->
+
     <!--part1 날씨 정보 박스-->
      <div class="text-box">
         <p class="location">
@@ -59,13 +75,13 @@
         <img src="img/회부기.svg" class="turtle-icon" style="width: 150px; padding-right: 11.5%;">
         <!-- 회부기 아이콘 -->
         </p>
-      </div>
+      </div> 
       <div class="stu-respo">
 
       </div>
     </div>
   </div>
-
+  
 <!-- 주관식 응답 part3 -->
   <div id="area-answer" style="background-color: rgba(255, 255, 0, 0.447); height: 400px; width: 80%; position: relative; top: 50%;">
     <div id="input-area">
@@ -75,6 +91,27 @@
     <div id="container"></div>
   </div>
 <!-- 주관식 응답 part3 -->
+
+ <!--시간날씨강수량 part2-->
+<table> <!--시간과 날씨-->
+  <td class="tmwt">
+    <span class="time">00시</span>
+    <span class="weatherimg"><img src="img/rain.svg" width="120" height="120" alt="날씨사진"></span>
+    <span class="precipitation">강수량</span>
+  </td>
+  <td class="tmwt">
+    <span class="time">00시</span>
+    <span class="weatherimg"><img src="img/sun.svg" width="120" height="120" alt="날씨사진"></span>
+    <span class="precipitation">강수량</span>
+  </td>
+  <td class="tmwt">
+    <span class="time">00시</span>
+    <span class="weatherimg"><img src="img/suncloud.svg" width="120" height="120" alt="날씨사진"></span>
+    <span class="precipitation">강수량</span>
+  </td>
+</table>
+<!--시간날씨강수량 part2-->
+
 <!-- 하단 날씨 제보하기 영역 -->
 <footer>
   <div class="foot">
