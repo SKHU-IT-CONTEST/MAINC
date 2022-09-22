@@ -24,14 +24,14 @@ body{
 #header{
     margin-left: 20px;
     font-weight: normal;
-    display: inline-flex;
-    flex-direction: row;
     text-shadow: 5px 5px 10px black;
+    letter-spacing: 5px;
+    text-align: center;
 }
 #head-in{
     padding-top: 8px;
     font-size: 3em;
-    font-family: "Jeju Gothic";
+    font-family: 'SeoulNamsanM';
     margin: 20px;
 }
 .material-icons {
@@ -72,8 +72,14 @@ body{
     font-size: 90px;
     padding: 40px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
-    width: fit-content;
-    margin: 20px;
+}
+.weater-icon{
+    padding-right: 20px;
+}
+.temp-box{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
 }
 .cloudy{
     font-size: 40px;
@@ -89,8 +95,14 @@ body{
 }
 .skhu-turtle{
     font-size: 40px;
-    padding: 10px;
+    padding: 50px 10px 10px 10px;
+    width: 65%;    
 
+}
+.turtle-box{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
 }
 
 /* 파트3 버튼 스타일 */
@@ -109,8 +121,72 @@ body{
 }
 /* 파트3 버튼 스타일 */
 
-    
+/* 하단 날씨 제보하기 영역 */
+.foot{
+    width: 100%;
+	bottom: 0px;
+	position: absolute;
+    border-radius: 30px;
+    background-color: rgba(227, 232, 242, 0.81);
+    text-align: center;
+    border-style: none;
 
-.weater-icon{
-    display: inline;
+    
 }
+#weather-tip{
+    text-align: center;
+    width: 94%;
+    height: 120px;
+    margin: 25.5px;
+    border-radius: 60px;
+    background-color: rgba(0, 147, 240, 1);
+    box-shadow:0 0 10px 5px rgb(135, 135, 135);   
+    border-style: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.material-icons-tip {
+    font-family: 'Material Icons';
+    position: relative;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  }
+
+.text-tip{
+    font-size: 4rem;
+    text-shadow: 5px 5px 2px rgb(123 123 123);
+}
+
+/* 하단 날씨 제보하기 영역 */
+
+/* 날씨제보 html 영역 */
+#top-title{
+    display: inline-flex;
+    flex-direction: row;
+    width: auto;
+}
+.material-icons-back {
+    font-family: 'Material Icons';
+    position: relative;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    display: inline-flex;
+    flex-direction: row;
+  }
+#header2{
+    font-weight: normal;
+    text-shadow: 5px 5px 10px black;
+    text-align: center;
+}
+/* 날씨제보 html 영역 */
