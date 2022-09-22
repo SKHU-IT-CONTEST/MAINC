@@ -1,0 +1,84 @@
+/*banner*/
+	.rollingbanner{
+		box-shadow: 5px 5px 5px gray;
+		background-color: rgba(227, 232, 242, 0.81);
+		box-sizing: border-box;
+		padding: 20px;
+		margin:30px;
+		border-radius: 50px;
+		position: relative;
+		height: 70px;
+		width:90%;
+		text-overflow: ellipsis;
+	}
+	  /* 타이틀 */
+	  .rollingbanner > .title{
+		position: absolute;
+		  float: left;
+		  top: -10px;
+	  }
+
+	  /* 롤링 배너 */
+	  .rollingbanner > .wrap{
+		  position: relative;
+		  height: 100%;
+		  overflow: hidden;
+		  left:100px;
+		  font-size:30px;
+		  font-weight: bold;
+	  }        
+	  /* 이전, 현재, 다음 롤링 배너 표시 */
+	  .rollingbanner .prev{
+		  top: 36px;
+		  transition: top 0.5s ease;
+	  }
+	  .rollingbanner .current{
+		  top: 0;
+		  transition: top 0.5s ease;
+	  }
+	  .rollingbanner .next{
+		  top: -36px;
+	  }
+	  .rollingbanner a{
+		  display: block;
+		  display: -webkit-box;
+		  text-decoration: none;
+		  -webkit-line-clamp: 1;
+		  -webkit-box-orient:vertical;
+		  overflow: hidden;
+		  color: #000;
+	  }
+
+
+
+
+		/*timeandweather*/
+	  table{
+		  border:1px solid rgba(227, 232, 242, 0.81);
+		  padding: 50px;
+		  margin:40px;
+		  background-color: rgba(227, 232, 242, 0.81);
+		  border-radius: 40px;
+		  width:90%;
+		  height: 10%;
+		  text-align: center;
+	  }
+	  .tmwt{
+		  padding:0 10px;
+	  }
+
+	  span.time{
+		display: block;
+		font-size: 50px;
+		margin: 10px;
+	  }
+	  span.weatherimg{
+		display: block;
+	  }
+	  span.precipitation{
+		display: block;
+		font-size: 50px;
+		margin: 10px;
+	}
+
+
