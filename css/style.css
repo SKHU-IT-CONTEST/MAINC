@@ -166,9 +166,9 @@ body{
 
 /* 날씨제보 html 영역 */
 #top-title{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    width: auto;
+
 }
 .material-icons-back {
     font-family: 'Material Icons';
@@ -181,12 +181,13 @@ body{
     background-color: transparent;
     color: white;
     text-shadow: 5px 5px 10px black;
-    display: inline-flex;
-    flex-direction: row;
   }
 #header2{
     font-weight: normal;
     text-shadow: 5px 5px 10px black;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 /* 날씨제보 html 영역 */
