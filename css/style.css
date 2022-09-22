@@ -130,8 +130,6 @@ body{
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
     border-style: none;
-
-    
 }
 #weather-tip{
     text-align: center;
@@ -160,15 +158,42 @@ body{
 .text-tip{
     font-size: 4rem;
     text-shadow: 5px 5px 2px rgb(123 123 123);
+    text-shadow: 5px 5px 8px rgb(104, 104, 104);
 }
 
 /* 하단 날씨 제보하기 영역 */
 
 /* 날씨제보 html 영역 */
+*{
+    margin: 0px;
+    padding: 0px;
+}
 #top-title{
     display: flex;
     flex-direction: row;
 
+}
+.icon-box{
+    border-radius: 50px;
+    background-color: rgba(227, 232, 242, 0.81);
+    padding: 40px 40px 40px 50px;
+    margin: 20px;
+    color: black;
+    float: left;
+    width: 87%;
+
+}
+#give_tip{
+    padding: 30px;
+    font-size: 3rem;
+}
+.turtle-sit{
+    font-size: 100px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
 }
 .material-icons-back {
     font-family: 'Material Icons';
@@ -180,14 +205,30 @@ body{
     border-style: none;
     background-color: transparent;
     color: white;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 8px rgb(104, 104, 104);
   }
 #header2{
     font-weight: normal;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 8px rgb(104, 104, 104);
     text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+}
+.foot2{
+    width: 100%;
+	bottom: 0px;
+	position: absolute;
+    border-radius: 30px;
+    background-color: rgba(227, 232, 242, 0.81);
+    text-align: center;
+    border-style: none;
+    object-fit:cover;
+}
+ul{
+    list-style: none;
+    padding: 4%;
+}
+li{
+    width: 200px;
 }
 /* 날씨제보 html 영역 */
