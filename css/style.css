@@ -142,6 +142,9 @@ body{
 /* 파트3 버튼 스타일 */
 
 /* 하단 날씨 제보하기 영역 */
+footer{
+    height: 200px;
+}
 .foot{
     width: 100%;
 	bottom: 0px;
