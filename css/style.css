@@ -106,18 +106,22 @@ body{
 }
 
 /* 파트3 버튼 스타일 */
+.part-3 {
+    background-color: rgba(250, 235, 215, 0.7);
+    margin: 50px;
+    padding: 50px;
+}
 .button-style {
     background-color: white;
-    box-shadow: 0 10 50;
+    margin: 50px;
+    padding: 50px;
 }
-
 .heart-style {
     color: plum;
 }
-.area-answer {
-    position: relative;
-    left: 5%;
-    top: auto;
+.plus-button {
+    margin: 50px;
+    padding: 50px;
 }
 /* 파트3 버튼 스타일 */
 
