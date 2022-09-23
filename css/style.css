@@ -168,15 +168,13 @@ body{
 /* 하단 날씨 제보하기 영역 */
 
 /* 날씨제보 html 영역 */
-*{
-    margin: 0px;
-    padding: 0px;
-}
+
 #top-title{
     display: flex;
     flex-direction: row;
 
 }
+
 .icon-box{
     border-radius: 50px;
     background-color: rgba(227, 232, 242, 0.81);
@@ -185,7 +183,6 @@ body{
     color: black;
     float: left;
     width: 87%;
-
 }
 #give_tip{
     padding: 30px;
@@ -207,16 +204,34 @@ body{
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
     border-style: none;
-    background-color: transparent;
+    /* background-color: transparent;
     color: white;
-    text-shadow: 5px 5px 8px rgb(104, 104, 104);
+    text-shadow: 5px 5px 8px rgb(104, 104, 104); */
   }
-#header2{
-    font-weight: normal;
-    text-shadow: 5px 5px 8px rgb(104, 104, 104);
+#weather-tip2{
     text-align: center;
+    width: 94%;
+    height: 120px;
+    margin: 25.5px;
+    border-radius: 60px;
+    background-color: rgba(0, 147, 240, 1);
+    box-shadow:0 0 10px 5px rgb(135, 135, 135);   
+    border-style: none;
+    color: white;
     display: flex;
     flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+#header2{
+    margin-left: 20px;
+    font-weight: normal;
+    text-shadow: 5px 5px 10px black;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px 0px 20px 0px;
+    color: white;
 }
 .foot2{
     width: 100%;
@@ -226,7 +241,6 @@ body{
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
     border-style: none;
-    object-fit:cover;
 }
 ul{
     list-style: none;
