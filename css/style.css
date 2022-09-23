@@ -108,20 +108,17 @@ body{
 /* 파트3 버튼 스타일 */
 .part-3 {
     background-color: rgba(250, 235, 215, 0.7);
-    margin: 50px;
-    padding: 50px;
 }
 .button-style {
     background-color: white;
-    margin: 50px;
-    padding: 50px;
+    margin-left: 40px;
 }
 .heart-style {
     color: plum;
 }
 .plus-button {
-    margin: 50px;
-    padding: 50px;
+    size: 200%;
+    margin-left: 40px;
 }
 /* 파트3 버튼 스타일 */
 
@@ -130,7 +127,7 @@ body{
     width: 100%;
 	bottom: 0px;
 	position: absolute;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
     border-style: none;
@@ -237,7 +234,7 @@ body{
     width: 100%;
 	bottom: 0px;
 	position: absolute;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
     border-style: none;
