@@ -1,16 +1,16 @@
 arr = [];
 var data = arr;
 
-// +버튼을 눌러 input박스를 생성
-function CreateButton() {
-	document.getElementById("plus-button").style.visibility = "hidden";
+// // +버튼을 눌러 input박스를 생성
+// function CreateButton() {
+// 	document.getElementById("plus-button").style.visibility = "hidden";
 
-    var InputArea = document.getElementById('input-area');
-    var Input = document.createElement('div');
-    InputArea.appendChild(Input);
+//     var InputArea = document.getElementById('input-area');
+//     var Input = document.createElement('div');
+//     InputArea.appendChild(Input);
 
-    Input.innerHTML = "<input type=\"text\" id=\"answer\" class=\"button-style\" onkeypress=\"if(event.keyCode==13){TextBox();}\">";
-}
+//     Input.innerHTML = "<input type=\"text\" id=\"answer\" class=\"button-style\" onkeypress=\"if(event.keyCode==13){TextBox();}\">";
+// }
 
 function TextBox() {
 
@@ -22,8 +22,11 @@ function TextBox() {
 	else{
 		var container = document.getElementById('container');// html에 있는 container id를 cont에 부여
 		
-		container.innerHTML = "<button id=\"answer-button\" class=\"button-style\"></button>";
-		var AnswerButton = document.getElementById('answer-button');
+		// container.innerHTML = "<button id=\"answer-button\" class=\"button-style\"></button>";
+		// var AnswerButton = document.getElementById('answer-button');
+		let AnswerButton = document.createElement('button');
+		AnswerButton.className = 'button-style';
+		AnswerButton.id = 'answer-button';
 		container.appendChild(AnswerButton);
 
 		
@@ -32,13 +35,13 @@ function TextBox() {
 
 		var HeartText = document.createElement('heart');
 		HeartText.className = 'heart-style';
-		HeartText.innerHTML = "♥";
+		HeartText.innerHTML = " ♥ ";
 		AnswerButton.appendChild(HeartText);
 
-		// document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
+		document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
 		
-		document.getElementById("plus-button").style.visibility ='visible';
-		document.getElementById("answer").remove();
+		// document.getElementById("plus-button").style.visibility ='visible';
+		// document.getElementById("answer").remove();
 
 		// 두 번째 버튼을 생성시 첫 번째 버튼이 사라지는 현상 해결해야함
 	}
