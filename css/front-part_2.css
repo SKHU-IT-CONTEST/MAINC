@@ -8,25 +8,35 @@
 		border-radius: 50px;
 		position: relative;
 		height: 70px;
-		width:90%;
-		text-overflow: ellipsis;
 	}
 	  /* 타이틀 */
 	  .rollingbanner > .title{
 		position: absolute;
 		  float: left;
-		  top: -10px;
+		  top: -15px;
 	  }
 
 	  /* 롤링 배너 */
 	  .rollingbanner > .wrap{
+
 		  position: relative;
 		  height: 100%;
 		  overflow: hidden;
-		  left:100px;
+		  left:130px;
 		  font-size:30px;
 		  font-weight: bold;
+
 	  }        
+
+	  .rolling ul{
+		list-style: none;
+		color:black;
+	}
+	 .rollingbanner li{
+		position: absolute;
+		top: -36px;
+		left: 0;
+	}
 	  /* 이전, 현재, 다음 롤링 배너 표시 */
 	  .rollingbanner .prev{
 		  top: 36px;
