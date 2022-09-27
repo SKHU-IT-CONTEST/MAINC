@@ -8,6 +8,7 @@
 		border-radius: 50px;
 		position: relative;
 		height: 70px;
+		width: 90%;
 	}
 	  /* 타이틀 */
 	  .rollingbanner > .title{
@@ -18,7 +19,6 @@
 
 	  /* 롤링 배너 */
 	  .rollingbanner > .wrap{
-
 		  position: relative;
 		  height: 100%;
 		  overflow: hidden;
@@ -73,6 +73,7 @@
 		  height: 10%;
 		  text-align: center;
 	  }
+	  td{padding:10px;}
 	  .tmwt{
 		  padding:0 10px;
 	  }
@@ -84,6 +85,10 @@
 	  }
 	  span.weatherimg{
 		display: block;
+	  }
+	  span.tem{
+		font-size:40px;
+
 	  }
 	  span.precipitation{
 		display: block;
