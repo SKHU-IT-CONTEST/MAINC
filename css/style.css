@@ -113,6 +113,9 @@ body{
 } */
 .part-3 {
     margin: 10px 40px;
+    position: absolute;
+    left: 0em;
+    top: 85em;
 }
 .button-style {
     background-color: white;
