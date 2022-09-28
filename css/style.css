@@ -113,9 +113,10 @@ body{
 } */
 .part-3 {
     margin: 10px 40px;
-    position: absolute;
+    /* position: absolute; */
     left: 0em;
     top: 85em;
+    /* display: inline; */
 }
 .button-style {
     background-color: white;
@@ -139,6 +140,11 @@ body{
     cursor: pointer;
     padding: 17.5px 30px;
     font-family: 'SeoulNamsanM';
+    float: right;
+    float: left;
+}
+#container {
+    display: inline;
 }
 .heart-style {
     padding: none;
