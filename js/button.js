@@ -46,13 +46,6 @@ function TextBox() {
 		// 두 번째 버튼을 생성시 첫 번째 버튼이 사라지는 현상 해결해야함
 	}
 }
-//온도 fetch 이용해서 임의로 가져온것
-fetch('http://152.67.207.160:32023/api/schoolNotice')
-    .then(response => response.json())
-    .then(json => { 
-        console.log(json[0].num) 
-        const el = document.querySelector('#temperature')
-        el.innerHTML=json[0].num
-    })
+
 
 	
