@@ -13,13 +13,11 @@
 body{
     background: url(/Users/yeaseul/Desktop/contest/frontend/fe_part1/img/bgimg.jpeg) no-repeat center;
     background-size: cover;
-    background-attachment: fixed;   /*배경이미지 고정방식 */
+    /* background-attachment: fixed;   배경이미지 고정방식 */
     height: 100vh;
     width: 100vw;
-    /* margin: 0px; */
 }
 #back{
-    margin: 20px;
     padding: 20px 0px 20px 0px;
     color: white;
 }
@@ -152,16 +150,21 @@ body{
 
 /* 하단 날씨 제보하기 영역 */
 footer{
-    height: 200px;
+    transform: translateY(-100%);
+    position: relative;
 }
 .foot{
     width: 100%;
 	bottom: 0px;
-	position: absolute;
     border-radius: 30px 30px 0 0;
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
     border-style: none;
+    display: inline-block;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 #weather-tip{
     text-align: center;
@@ -174,7 +177,6 @@ footer{
     border-style: none;
     color: white;
     display: flex;
-    flex-direction: row;
     justify-content:center;
     align-items: center;
 }
@@ -209,12 +211,12 @@ footer{
     padding: 40px 40px 40px 50px;
     margin: 20px;
     color: black;
-    float: left;
     width: 87%;
+    height: fit-content;
 }
 #give_tip{
-    padding: 30px;
     font-size: 3rem;
+    text-align: center;
 }
 .turtle-sit{
     font-size: 100px;
@@ -222,7 +224,7 @@ footer{
     width: 100%;
     flex-direction: row;
     flex: 1;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .material-icons-back {
     font-family: 'Material Icons';
@@ -268,13 +270,21 @@ footer{
     border-radius: 30px 30px 0 0;
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
-    border-style: none;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
 }
 ul{
     list-style: none;
-    padding: 4%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
 }
-/*li{
-    width: 200px;
-}*/
-/* 날씨제보 html 영역 */
+li{
+    display: inline-block;
+    text-align: center;
+    margin: 30px;
+    width: 180px;
+}
+/* 날씨
+제보 html 영역 */
