@@ -163,9 +163,9 @@ footer{
     border-style: none;
     display: inline-block;
     margin-top: 20px;
-    /* position: absolute;
+    position:inherit;
     left: 0;
-    bottom: 0; */
+    bottom: 0;
     /* 일단 주석 처리 -> 화면 크기에 따라서 absolute가 다른 div 들을 먹음 */
 }
 #weather-tip{
