@@ -25,8 +25,8 @@ function TextBox() {
 		// container.innerHTML = "<button id=\"answer-button\" class=\"button-style\"></button>";
 		// var AnswerButton = document.getElementById('answer-button');
 		let AnswerButton = document.createElement('button');
-		AnswerButton.className = 'button-style';
-		AnswerButton.id = 'answer-button';
+		AnswerButton.className = 'buttonStyle';
+		AnswerButton.id = 'answerButton';
 		container.appendChild(AnswerButton);
 
 		
@@ -34,7 +34,7 @@ function TextBox() {
 		AnswerButton.appendChild(AnswerText);
 
 		var HeartText = document.createElement('heart');
-		HeartText.className = 'heart-style';
+		HeartText.className = 'heartStyle';
 		HeartText.innerHTML = " ♥ ";
 		AnswerButton.appendChild(HeartText);
 
@@ -46,6 +46,3 @@ function TextBox() {
 		// 두 번째 버튼을 생성시 첫 번째 버튼이 사라지는 현상 해결해야함
 	}
 }
-
-
-	
