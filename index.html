@@ -113,7 +113,7 @@
 <div class="part3">
   <div class="answerArea">
     <!-- <button id="plus-button" class="button-style" onclick="CreateButton()">+</button> -->
-    <input type="text" id="answer" class="inputButtonStyle" onkeypress="if(event.keyCode==13){TextBox();}">
+    <input type="text" id="answer" class="inputButtonStyle" onkeypress="if(event.keyCode==13){TextBox();}" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)">
     <div id="container"></div>
   </div>
 <!-- 주관식 응답 part3 -->
