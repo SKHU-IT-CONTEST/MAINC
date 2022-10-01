@@ -19,6 +19,8 @@ body{
     width: 100vw;
     /* 제보하기 빈 공간 확보 */
     padding-bottom: 300px;
+    /* 배경 블러 처리 -> body 나눠짐 issue */
+    backdrop-filter: blur(4px);
 }
 #back{
     padding: 20px 0px 20px 0px;
@@ -33,9 +35,9 @@ body{
 }
 #head-in{
     padding-top: 8px;
-    font-size: 3em;
+    font-size: 37px;
     font-family: 'SeoulNamsanM';
-    margin: 20px;
+    margin: 40px 20px 45px 20px;
 }
 .material-icons {
     font-family: 'Material Icons';
@@ -59,10 +61,10 @@ body{
     border-radius: 50px;
     background-color: rgba(227, 232, 242, 0.81);
     padding: 40px 40px 40px 50px;
-    margin: 20px;
+    margin: 20px 40px;
     color: black;
     float: left;
-    width: 87%;
+    width: -webkit-fill-available;
 
 }
 .location{
@@ -98,7 +100,7 @@ body{
 }
 .skhu-turtle{
     font-size: 40px;
-    padding: 50px 10px 10px 10px;
+    padding: 30px 10px 10px 10px;
     width: 65%;    
 
 }
@@ -174,12 +176,12 @@ body{
     height: 120px;
     margin: 25.5px;
     border-radius: 60px;
-    background-color: rgba(0, 147, 240, 1);
+    background-color: rgba(54 112 152 / 74%);
     box-shadow:0 0 10px 5px rgb(135, 135, 135);   
     border-style: none;
     color: white;
     display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items: center;
 }
 .material-icons-tip {
@@ -192,7 +194,7 @@ body{
   }
 
 .text-tip{
-    font-size: 4rem;
+    font-size: 50px;
     text-shadow: 5px 5px 2px rgb(123 123 123);
     text-shadow: 5px 5px 8px rgb(104, 104, 104);
 }
@@ -200,6 +202,12 @@ body{
 /* 하단 날씨 제보하기 영역 */
 
 /* 날씨제보 html 영역 */
+#head-in2{
+    padding-top: 8px;
+    font-size: 50px;
+    font-family: 'SeoulNamsanM';
+    margin: 20px 20px 70px 20px
+}
 
 #top-title{
     display: flex;
