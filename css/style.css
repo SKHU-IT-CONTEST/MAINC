@@ -32,6 +32,7 @@ body{
     text-shadow: 5px 5px 10px black;
     letter-spacing: 5px;
     text-align: center;
+    line-height: 4rem;
 }
 #head-in{
     padding-top: 8px;
@@ -60,6 +61,7 @@ body{
 .text-box{
     border-radius: 50px;
     background-color: rgba(227, 232, 242, 0.81);
+    box-shadow: 5px 5px 5px grey;
     padding: 40px 40px 40px 50px;
     margin: 20px 40px;
     color: black;
@@ -68,13 +70,13 @@ body{
 
 }
 .location{
-    font-size: 40px;
+    font-size: xx-large;
     font-weight: lighter;
     display: inline-flex;
     flex-direction: row;
 }
 .temp{
-    font-size: 90px;
+    font-size: 4em;
     padding: 40px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
 }
@@ -87,21 +89,22 @@ body{
     justify-content:space-between ;
 }
 .cloudy{
-    font-size: 40px;
+    font-size: xx-large;
     padding: 10px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
     margin: 20px;
 }
 .water{
-    font-size: 40px;
+    font-size: xx-large;
     padding: 10px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
     margin: 20px;
 }
 .skhu-turtle{
-    font-size: 40px;
-    padding: 30px 10px 10px 10px;
-    width: 65%;    
+    font-size: xx-large;
+    padding: 0.5em 0em 0em 1em;
+    width: 65%;  
+    line-height: 1.5;  
 
 }
 .turtle-box{
@@ -120,7 +123,7 @@ body{
     margin: 10px 30px;
     height: fit-content;
     display: block;
-    width: 100%;
+    width: 90%;
   }
 .answerArea {
     height: inherit;
@@ -194,7 +197,7 @@ body{
   }
 
 .text-tip{
-    font-size: 50px;
+    font-size: 2.5rem;
     text-shadow: 5px 5px 2px rgb(123 123 123);
     text-shadow: 5px 5px 8px rgb(104, 104, 104);
 }

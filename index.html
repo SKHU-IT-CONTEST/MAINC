@@ -18,6 +18,11 @@
   <script src="js/schoolNotice.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/weather.js"></script>
+  <style>
+    @media (min-width: 481px) and (max-width: 767px) {
+      /* 미디어 쿼리에 따른 css 적용 */
+    }
+  </style>
 
 
 
@@ -27,17 +32,20 @@
   <div id="back"><!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
     <!-- 맨 위에 제목 부분 -->
     <div id="header">
-      <p id="head-in">성공회대학교 날씨제공 서비스 "쿠름이"</p>
+      <p id="head-in">성공회대학교 날씨제공 서비스<br> "쿠름이"</p>
     </div>
     <!-- 맨 위에 제목 부분 -->
 
     <!--part2 공지사항 박스 part2-->
   <div class="rollingbanner">
-      <div class="title"><img src="img/noticeicon.svg" width="120" height="120" alt="날씨사진"></div>
+      <div class="title" style="font-size: 53px; display: inline-flex;">
+          campaign
+      </div>
       <div class="wrap">
           <ul>
-          </ul>
+          </ul>    
       </div>
+
   </div>
      <!--part2 공지사항 박스 part2-->
 
@@ -45,7 +53,7 @@
      <div class="text-box">
         <p class="location">
         <span class="material-icons"
-        style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
+        style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
             my_location
         </span>
             성공회대학교 현재 날씨
@@ -55,18 +63,18 @@
 
         </span>
         <!--날씨 아이콘-->
-          <img src="img/sun.svg" class="weather-icon" style="width: 130px; padding-right: 10%;">
+          <img src="img/sun.svg" class="weather-icon" style="width: 7em; padding-right: 10%;">
         <!--날씨 아이콘-->
         </p>
         <p class="cloudy">
         <span class="material-icons"
-          style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
+          style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
             wb_cloudy
         </span>강수 확률 :
         </p>
         <p class="water">
         <span class="material-icons"
-          style="font-size: 40px; display: inline-flex; flex-direction: row; padding-right: 20px;">
+          style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
             water_drop
         </span>습도 :
         </p>
@@ -76,7 +84,7 @@
             undefined.
         </span>
         <!-- 회부기 아이콘 -->
-        <img src="img/회부기.svg" class="turtle-icon" style="width: 130px; padding-right: 9.3%;">
+        <img src="img/회부기.svg" class="turtle-icon" style="width: 7em; padding-right: 9.3%;">
         <!-- 회부기 아이콘 -->
         </p>
       </div> 
@@ -88,7 +96,7 @@
 
 
  <!--시간날씨강수량 part2-->
-<table> <!--시간과 날씨-->
+<table class="wea"> <!--시간과 날씨-->
   <td class="tmwt">
     <span class="time">00시</span>
     <span class="weatherimg"><img src="img/rain.svg" width="120" height="120" alt="날씨사진"></span>
@@ -126,11 +134,11 @@
 
   <div class="foot">
     <button id="weather-tip" type="button" onclick="location.href='tip.html'">
-      <span class="material-icons-tip" style="font-size: 100px;">
-        campaign
+      <span class="material-icons-tip" style="font-size: 6em;">
+        notifications
       </span>
       <span class="text-tip">
-      현재 성공회대 날씨 제보하기
+      지금 성공회대 날씨를 제보해주세요!
       </span>
     </button>
   </div>
