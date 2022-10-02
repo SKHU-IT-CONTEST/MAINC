@@ -210,10 +210,11 @@ body{
 
 /* 날씨제보 html 영역 */
 #head-in2{
-    padding-top: 8px;
-    font-size: 50px;
-    font-family: 'SeoulNamsanM';
-    margin: 20px 20px 70px 20px
+  padding-top: 8px;
+  font-size: 37px;
+  font-family: 'SeoulNamsanM';
+  margin: 40px 20px 45px 20px;
+  line-height: 1.5em;
 }
 
 #top-title{
@@ -225,14 +226,14 @@ body{
 .icon-box{
     border-radius: 50px;
     background-color: rgba(227, 232, 242, 0.81);
-    padding: 40px 40px 40px 50px;
+    padding: 40px 0px 40px 0px;
     margin: 20px;
     color: black;
-    width: 87%;
     height: fit-content;
 }
 #give_tip{
-    font-size: 3rem;
+    font-size: 2.3em;
+    margin: 1em;
     text-align: center;
 }
 .turtle-sit{
@@ -282,13 +283,9 @@ body{
 }
 .foot2{
     width: 100%;
-	bottom: 0px;
-	position: absolute;
     border-radius: 30px 30px 0 0;
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
-    left: 0;
-    bottom: 0;
     display: inline-block;
 }
 ul{
@@ -300,8 +297,10 @@ ul{
 .turtle-feel{
     display: inline-block;
     text-align: center;
-    margin: 30px;
     width: 180px;
+}
+.padding2 {
+  height: 101px
 }
 /* 날씨
 제보 html 영역 */
