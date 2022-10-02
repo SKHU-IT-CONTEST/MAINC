@@ -133,10 +133,14 @@ body{
 .inputButtonStyle, .buttonStyle {
   font-family: 'SeoulNamsanM';
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: rgba(255, 255, 255, 0.207);
   font-size: 35px;
 =======
   background-color: white;
+=======
+  background-color: #ffffffcc;
+>>>>>>> 9588c5066cf6e4f72303b45c062aa49d1d40f97c
   font-size: 33px;
 >>>>>>> ff082c8a34adf788c68e1b1be4d825624082d7f2
   padding: 0.5em 0.6em;
