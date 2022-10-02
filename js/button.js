@@ -11,7 +11,7 @@ function TextBox() {
 		alert('금지어입니다.');
 	}
 	else{
-		var container = document.getElementById('container');// html에 있는 container id를 cont에 부여
+		var container = document.getElementById('container');// html에 있는 container id를 container에 부여
 		
 		let AnswerButton = document.createElement('button');
 		AnswerButton.className = 'buttonStyle';
