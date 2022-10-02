@@ -7,10 +7,23 @@ fetch('http://152.67.207.160:32023/api/schoolNotice')
         el.innerHTML=json[0].num
     })
 
-// fetch("./back-part_2-back-part_1/modified.json")
-// .then((res)=>{
-//     return res.json()
-// })
-// .then((obj)=>{
-//     list(obj)
-// })
+    function detectMobileDevice(agent) {
+        const mobileRegex = [
+          /Android/i,
+          /iPhone/i,
+          /iPad/i,
+          /iPod/i,
+          /BlackBerry/i,
+          /Windows Phone/i
+        ]
+      
+        return mobileRegex.some(mobile => agent.match(mobile))
+      }
+      
+      const isMobile = detectMobileDevice(window.navigator.userAgent)
+      
+      if (isMobile) {
+        true
+      } else {
+        alert('쿠름이는 모바일 접속을 권장합니다!')
+      }
