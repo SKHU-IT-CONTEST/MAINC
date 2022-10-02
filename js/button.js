@@ -11,7 +11,7 @@ function TextBox() {
 		alert('금지어입니다.');
 	}
 	else{
-		var container = document.getElementById('container');// html에 있는 container id를 cont에 부여
+		var container = document.getElementById('container');// html에 있는 container id를 container에 부여
 		
 		let AnswerButton = document.createElement('button');
 		AnswerButton.className = 'buttonStyle';
@@ -24,7 +24,7 @@ function TextBox() {
 
 		var HeartText = document.createElement('heart');
 		HeartText.className = 'heartStyle';
-		HeartText.innerHTML = " ♥ ";
+		HeartText.innerHTML = '&nbsp;<img src="img/heart.svg"/>';
 		AnswerButton.appendChild(HeartText);
 
 		document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
