@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=0.5, width=device-width, user-scalable=no">
   <title>쿠름이</title>
-  <link rel="stylesheet" href="css/style.css" >
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/front-part_2.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sunflower&display=swap" rel="stylesheet">
@@ -18,10 +18,20 @@
   <script src="js/schoolNotice.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/weather.js"></script>
+  <script>
+ //모바일기기이름을 담은 배열
+ var mobile_keys = new Array('iPhone','iPad','Android','BlackBerry','Windows Phone',
+            'Windows CE','LG','MOT','SAMSUNG','SonyEricsson','Nokia');
+
+            for(var i in mobile_keys){
+                //브라우저의 에이전트 정보에 모바일이름과 매치되는 글자가 있다면
+                if(navigator.userAgent.match(mobile_keys[i])){ 
+                    alert('모바일기기에서 접속했습니다.');
+                }
+            }
+  </script>
   <style>
-    @media (min-width: 481px) and (max-width: 767px) {
-      /* 미디어 쿼리에 따른 css 적용 */
-    }
+
   </style>
 
 
@@ -29,7 +39,8 @@
 </head>
 
 <body>
-  <div id="back"><!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
+  <div id="back">
+    <!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
     <!-- 맨 위에 제목 부분 -->
     <div id="header">
       <p id="head-in">성공회대학교 날씨제공 서비스<br> "쿠름이"</p>
@@ -37,100 +48,102 @@
     <!-- 맨 위에 제목 부분 -->
 
     <!--part2 공지사항 박스 part2-->
-  <div class="rollingbanner">
+    <div class="rollingbanner">
       <div class="title" style="font-size: 53px; display: inline-flex;">
-          campaign
+        campaign
       </div>
       <div class="wrap">
-          <ul>
-          </ul>    
+        <ul>
+        </ul>
       </div>
 
-  </div>
-     <!--part2 공지사항 박스 part2-->
+    </div>
+    <!--part2 공지사항 박스 part2-->
 
     <!--part1 날씨 정보 박스-->
-     <div class="text-box">
-        <p class="location">
+    <div class="text-box">
+      <p class="location">
         <span class="material-icons"
-        style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
-            my_location
+          style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
+          my_location
         </span>
-            성공회대학교 현재 날씨
-        </p>
-        <p class="temp-box">
+        성공회대학교 현재 날씨
+      </p>
+      <p class="temp-box">
         <span class="temp" id="temperature">
 
         </span>
         <!--날씨 아이콘-->
-          <img src="img/sun.svg" class="weather-icon" style="width: 7em; padding-right: 10%;">
+        <img src="img/sun.svg" class="weather-icon" style="width: 7em; padding-right: 10%;">
         <!--날씨 아이콘-->
-        </p>
-        <p class="cloudy">
+      </p>
+      <p class="cloudy">
         <span class="material-icons"
           style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
-            wb_cloudy
+          wb_cloudy
         </span>강수 확률 :
-        </p>
-        <p class="water">
+      </p>
+      <p class="water">
         <span class="material-icons"
           style="font-size: xx-large; display: inline-flex; flex-direction: row; padding-right: 20px;">
-            water_drop
+          water_drop
         </span>습도 :
-        </p>
-        <p class="turtle-box">
+      </p>
+      <p class="turtle-box">
         <span class="skhu-turtle">
-            회부기는 지금<br>
-            undefined.
+          회부기는 지금<br>
+          undefined.
         </span>
         <!-- 회부기 아이콘 -->
         <img src="img/회부기.svg" class="turtle-icon" style="width: 7em; padding-right: 9.3%;">
         <!-- 회부기 아이콘 -->
-        </p>
-      </div> 
-      <div class="stu-respo">
+      </p>
+    </div>
+    <div class="stu-respo">
 
-      </div>
     </div>
   </div>
-
-
- <!--시간날씨강수량 part2-->
-<table class="wea"> <!--시간과 날씨-->
-  <td class="tmwt">
-    <span class="time">00시</span>
-    <span class="weatherimg"><img src="img/rain.svg" width="120" height="120" alt="날씨사진"></span>
-    <span class="tem">23도</span>
-    <span class="precipitation">강수량</span>
-  </td>
-  <td class="tmwt">
-    <span class="time">00시</span>
-    <span class="weatherimg"><img src="img/sun.svg" width="120" height="120" alt="날씨사진"></span>
-    <span class="tem">23도</span>
-    <span class="precipitation">강수량</span>
-  </td>
-  <td class="tmwt">
-    <span class="time">00시</span>
-    <span class="weatherimg"><img src="img/suncloud.svg" width="120" height="120" alt="날씨사진"></span>
-    <span class="tem">23도</span>
-    <span class="precipitation">강수량</span>
-  </td>
-</table>
-<!--시간날씨강수량 part2-->
-
-<!-- 주관식 응답 part3 -->
-<div class="part3">
-  <div class="answerArea">
-    <!-- <button id="plus-button" class="button-style" onclick="CreateButton()">+</button> -->
-    <input type="text" id="answer" class="inputButtonStyle" onkeypress="if(event.keyCode==13){TextBox();}" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)">
-    <div id="container"></div>
   </div>
-<!-- 주관식 응답 part3 -->
-  <div class="reportArea">
-    제보하기가 위치해야할 공간입니다.
+
+
+  <!--시간날씨강수량 part2-->
+  <table class="wea">
+    <!--시간과 날씨-->
+    <td class="tmwt">
+      <span class="time">00시</span>
+      <span class="weatherimg"><img src="img/rain.svg" width="120" height="120" alt="날씨사진"></span>
+      <span class="tem">23도</span>
+      <span class="precipitation">강수량</span>
+    </td>
+    <td class="tmwt">
+      <span class="time">00시</span>
+      <span class="weatherimg"><img src="img/sun.svg" width="120" height="120" alt="날씨사진"></span>
+      <span class="tem">23도</span>
+      <span class="precipitation">강수량</span>
+    </td>
+    <td class="tmwt">
+      <span class="time">00시</span>
+      <span class="weatherimg"><img src="img/suncloud.svg" width="120" height="120" alt="날씨사진"></span>
+      <span class="tem">23도</span>
+      <span class="precipitation">강수량</span>
+    </td>
+  </table>
+  <!--시간날씨강수량 part2-->
+
+  <!-- 주관식 응답 part3 -->
+  <div class="part3">
+    <div class="answerArea">
+      <!-- <button id="plus-button" class="button-style" onclick="CreateButton()">+</button> -->
+      <input type="text" id="answer" class="inputButtonStyle" onkeypress="if(event.keyCode==13){TextBox();}"
+        onkeyup="characterCheck(this)" onkeydown="characterCheck(this)">
+      <div id="container"></div>
+    </div>
+    <!-- 주관식 응답 part3 -->
+    <div class="reportArea">
+      제보하기가 위치해야할 공간입니다.
+    </div>
   </div>
-</div>
-<!-- 하단 날씨 제보하기 영역 -->
+  <!-- 하단 날씨 제보하기 영역 -->
 
   <div class="foot">
     <button id="weather-tip" type="button" onclick="location.href='tip.html'">
@@ -138,12 +151,12 @@
         notifications
       </span>
       <span class="text-tip">
-      지금 성공회대 날씨를 제보해주세요!
+        지금 성공회대 날씨를 제보해주세요!
       </span>
     </button>
   </div>
 
-<!-- 하단 날씨 제보하기 영역 -->
+  <!-- 하단 날씨 제보하기 영역 -->
 </body>
 
 
