@@ -10,17 +10,17 @@
     margin: 0px;
     font-family: 'SeoulNamsanM';
 }
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 body{
     background: url(/Users/yeaseul/Desktop/contest/frontend/fe_part1/img/bgimg.jpeg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;   
     /* 배경이미지 고정방식 */
-    height: 100vh;
-    width: 100vw;
-    /* 제보하기 빈 공간 확보 */
-    padding-bottom: 300px;
-    /* 배경 블러 처리 -> body 나눠짐 issue */
-    backdrop-filter: blur(4px);
+    padding-bottom: 171px;
 }
 #back{
     padding: 20px 0px 20px 0px;
@@ -158,10 +158,13 @@ body{
 }
   /* 파트3 버튼 스타일 */
 
+  .padding {
+    height: 171px
+  }
+/* 제보하기 내가는 것 임시 방편 ㅋㅋㅋ */
 /* 하단 날씨 제보하기 영역 */
 .foot{
     width: 100%;
-	bottom: 0px;
     border-radius: 30px 30px 0 0;
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
@@ -169,8 +172,8 @@ body{
     display: inline-block;
     margin-top: 20px;
     position : fixed;
+	bottom: 0px;
     left: 0;
-    bottom: 0;
     /* 일단 주석 처리 -> 화면 크기에 따라서 absolute가 다른 div 들을 먹음 */
 }
 #weather-tip{
