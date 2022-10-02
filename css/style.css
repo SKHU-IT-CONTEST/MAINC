@@ -125,22 +125,35 @@ body{
     width: -webkit-fill-available;
   }
 .answerArea {
-    height: inherit;
-    width: inherit;
+    height: 16.3rem;
+    overflow: scroll;
+    width: initial;
+    padding-left: 1em;
 }
 .inputButtonStyle, .buttonStyle {
   font-family: 'SeoulNamsanM';
+<<<<<<< HEAD
   background-color: rgba(255, 255, 255, 0.207);
   font-size: 35px;
+=======
+  background-color: white;
+  font-size: 33px;
+>>>>>>> ff082c8a34adf788c68e1b1be4d825624082d7f2
   padding: 0.5em 0.6em;
   border: none;
   border-radius: 32.5px;
   box-shadow: 0px 5px 5px 5px gray;
   float: left;
+  display: inline-flex;
 }
 .inputButtonStyle {
   margin: 0.2em;
+<<<<<<< HEAD
   width: 5em;
+=======
+  width: 6em;
+  height: 1.2em;
+>>>>>>> ff082c8a34adf788c68e1b1be4d825624082d7f2
 }
 .buttonStyle {
   margin: 0.2em;
@@ -151,10 +164,7 @@ body{
   -webkit-text-stroke: 1px black;
   font-size: 36px;
 }
-.reportArea {
-  font-size: 40px;
-  background-color: rgba(255, 255, 0, 0.346);
-}
+
   /* 파트3 버튼 스타일 */
 
   .padding {

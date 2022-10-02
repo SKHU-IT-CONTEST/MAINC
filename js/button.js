@@ -24,7 +24,7 @@ function TextBox() {
 
 		var HeartText = document.createElement('heart');
 		HeartText.className = 'heartStyle';
-		HeartText.innerHTML = " ♥ ";
+		HeartText.innerHTML = '&nbsp;<img src="img/heart.svg"/>';
 		AnswerButton.appendChild(HeartText);
 
 		document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
