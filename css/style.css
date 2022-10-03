@@ -38,7 +38,7 @@ body{
     padding-top: 8px;
     font-size: 37px;
     font-family: 'SeoulNamsanM';
-    margin: 40px 20px 45px 20px;
+    margin: 0px 20px 20px 20px;
 }
 .material-icons {
     font-family: 'Material Icons';
@@ -160,6 +160,8 @@ body{
 }
 .buttonStyle {
   margin: 0.2em;
+
+  
 }
 .heartStyle {
   position: relative;
@@ -167,7 +169,6 @@ body{
   -webkit-text-stroke: 1px black;
   font-size: 36px;
 }
-
   /* 파트3 버튼 스타일 */
 
   .padding {
