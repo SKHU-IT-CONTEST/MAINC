@@ -21,12 +21,15 @@
   <script src="js/schoolNotice.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/weather.js"></script>
-
-
-
+  <script src="./js/jquery-latest.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
+<!-- loading 화면 HTML Start -->
+  <div class="loader"></div>
+<!-- loading 화면 HTML End -->
+
   <div id="back">
     <!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
     <!-- 맨 위에 제목 부분 -->
@@ -96,6 +99,7 @@
 
   <!--시간날씨강수량 part2-->
   <table id="wea" style="	border-radius: 30px;">
+
     <!--시간과 날씨-->
     <td class="tmwt">
       <span class="time">00시</span>
@@ -127,10 +131,12 @@
         onkeyup="characterCheck(this)" onkeydown="characterCheck(this)">
       <div id="container"></div>
     </div>
+
     <!-- 주관식 응답 part3 -->
     <div class="reportArea">
     </div>
   </div>
+  <!-- 주관식 응답 part3 -->
   <!-- 하단 날씨 제보하기 영역 -->
   <div class="padding"></div>
   <div class="foot">
@@ -145,6 +151,14 @@
   </div>
 
   <!-- 하단 날씨 제보하기 영역 -->
+
+  <!--loading 화면 JS Start-->
+  <script>
+$(window).load(function () {
+  $(".loader").fadeOut();
+});
+  </script>
+<!--loading 화면 JS End-->
 </body>
 
 
