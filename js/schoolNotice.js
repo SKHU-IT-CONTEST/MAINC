@@ -1,6 +1,5 @@
-window.onload = loadJSON; //load the JSON file
 
-function loadJSON()
+window.onload = function loadJSON()
 {   
     
     const url = 'http://api3.skhuweather.kro.kr/api/schoolNotice'; // API URL
