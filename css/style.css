@@ -20,7 +20,7 @@ body{
     background-size: cover;
     background-attachment: fixed;   
     /* 배경이미지 고정방식 */
-    padding-bottom: 250px;
+    /* padding-bottom: 120px; */
 }
 #back{
     padding: 20px 0px 20px 0px;
@@ -120,12 +120,12 @@ body{
     /* height: 10%; */
     /* overflow: scroll; */
     /* width: fit-content; */
-    margin: 10px 30px;
+    margin: 10px 20px;
     display: block;
     width: -webkit-fill-available;
   }
 .answerArea {
-    height: 16.3rem;
+    /* height: 16.3rem; */
     overflow: scroll;
     width: initial;
     padding-left: 1em;
@@ -133,7 +133,7 @@ body{
 .inputButtonStyle, .buttonStyle {
   font-family: 'SeoulNamsanM';
   font-size: 35px;
-  background-color: #ffffffcc;
+  background-color: #ffffffb0;
   font-size: 33px;
   padding: 0.5em 0.6em;
   border: none;
