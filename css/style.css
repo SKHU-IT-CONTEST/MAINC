@@ -143,6 +143,16 @@ body{
   display: inline-flex;
 }
 .inputButtonStyle {
+  font-family: 'SeoulNamsanM';
+  font-size: 35px;
+  background-color: #ffffffcc;
+  font-size: 33px;
+  padding: 0.5em 0.6em;
+  border: none;
+  border-radius: 32.5px;
+  box-shadow: 0px 5px 5px 5px gray;
+  float: left;
+  display: inline-flex;
   margin: 0.2em;
   width: 5em;
   height: 1.2em;
