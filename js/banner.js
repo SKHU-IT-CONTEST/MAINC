@@ -2,7 +2,7 @@
     document.addEventListener('DOMContentLoaded', ()=>{
         var interval = window.setInterval(rollingCallback, 3000);
     })
-	loadJSON();
+    loadJSON();
     function rollingCallback(){
         document.querySelector('.rollingbanner .prev').classList.remove('prev');
     
