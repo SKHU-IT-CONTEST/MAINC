@@ -1,5 +1,5 @@
 //온도 fetch 이용해서 임의로 가져온것
-fetch('http://152.67.207.160:32023/api/schoolNotice')
+fetch('http://api3.skhuweather.kro.kr/api/schoolNotice')
     .then(response => response.json())
     .then(json => { 
         console.log(json[0].num) 

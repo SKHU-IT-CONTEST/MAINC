@@ -1,6 +1,6 @@
 function loadJSON()
 {
-    const url = 'http://152.67.207.160:32023/api/schoolNotice';
+    const url = 'http://api3.skhuweather.kro.kr/api/schoolNotice';
     const baseurl = "https://lms.skhu.ac.kr/ilos/community/notice_view_form.acl?ARTL_NUM=";
     let tag = ['current', 'next', 'prev'];
     fetch(url)
