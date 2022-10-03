@@ -87,7 +87,7 @@
 	margin: 40px;
 	background-color: rgba(227, 232, 242, 0.81);
 	border-radius: 40px;
-	width: 47rem;
+	width: -webkit-fill-available;
 	height: 10%;
 	text-align: center;
 	box-shadow: 5px 5px 5px grey;
