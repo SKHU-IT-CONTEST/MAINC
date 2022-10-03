@@ -20,6 +20,9 @@ function TextBox() {
 	else if(checkEn.test(answertemp)) {
 		alert('한글만 쓸 수 있어요!');
 	}
+	else if(answertemp.length >= 10 ) {
+		alert('내용이 너무 많아요!');
+	}
 	else{
 		var container = document.getElementById('container');// html에 있는 container id를 container에 부여
 		
@@ -30,12 +33,19 @@ function TextBox() {
 
 		
 		var AnswerText = document.createTextNode(answertemp);
+		AnswerText.className = "answerText";
 		AnswerButton.appendChild(AnswerText);
 
 		var HeartText = document.createElement('heart');
-		HeartText.className = 'heartStyle';
+		// HeartText.className = 'heartStyle';
 		HeartText.innerHTML = '&nbsp;<img src="img/heart.svg"/>';
 		AnswerButton.appendChild(HeartText);
+
+		// 서버에서 응답한 사용자를 받아와 숫자로 표현해줄 기능
+		var answerNum = document.createElement('answerNum');
+		answerNum.innerHTML = "&nbsp;"+Math.floor(Math.random() * 10);
+		answerNum.className = "answerText";
+		AnswerButton.appendChild(answerNum);
 
 		document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
 	}
