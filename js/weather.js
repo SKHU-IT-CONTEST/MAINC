@@ -6,7 +6,7 @@ fetch('http://api3.skhuweather.kro.kr/api/schoolNotice')
         const el = document.querySelector('#temperature')
         el.innerHTML=json[0].num
     })
-
+//
     function detectMobileDevice(agent) {
         const mobileRegex = [
           /Android/i,
