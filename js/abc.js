@@ -1,6 +1,6 @@
-function loadJSON()
+window.onload= function()
 {
-    const url = 'http://api3.skhuweather.kro.kr/api/schoolNotice';
+    const url = 'http://api3.skhuweather.kro.kr/api/schoolNotice'; // API URL
     const baseurl = "https://lms.skhu.ac.kr/ilos/community/notice_view_form.acl?ARTL_NUM=";
     let tag = ['current', 'next', 'prev'];
     fetch(url)
@@ -12,8 +12,8 @@ function loadJSON()
         let fin = document.createElement('li');
 		let A = document.createElement('a');
 		let createAText = document.createTextNode(data["" + i]["title"]);
-        A.href = baseurl + data["" + i]["num"]
-        target= "_blank";
+        A.href = baseurl + data["" + i]["num"];
+        A.target='_blank';
         if(i == 0 || i == 1 || i == 7){
             fin.className = tag[0];
             tag.shift();
@@ -25,4 +25,3 @@ function loadJSON()
         
     });
 }
-
