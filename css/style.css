@@ -59,6 +59,7 @@ body{
     text-shadow: 5px 5px 10px black;
   }
 .text-box{
+    border-radius: 50px;
     background-color: rgba(227, 232, 242, 0.81);
     box-shadow: 5px 5px 5px grey;
     padding: 40px 40px 40px 50px;
@@ -159,6 +160,8 @@ body{
 }
 .buttonStyle {
   margin: 0.2em;
+
+  
 }
 .heartStyle {
   position: relative;
