@@ -62,7 +62,7 @@ body{
     border-radius: 50px;
     background-color: rgba(227, 232, 242, 0.81);
     box-shadow: 5px 5px 5px grey;
-    padding: 40px 40px 40px 50px;
+    padding: 30px 40px 30px 50px;
     margin: 20px 40px;
     color: black;
     float: left;
@@ -92,13 +92,13 @@ body{
     font-size: xx-large;
     padding: 10px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
-    margin: 20px;
+    margin: 0px 20px 0px 20px;
 }
 .water{
     font-size: xx-large;
     padding: 10px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
-    margin: 20px;
+    margin: 0px 20px 0px 20px;
 }
 .skhu-turtle{
     font-size: xx-large;
