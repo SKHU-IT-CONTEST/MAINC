@@ -223,7 +223,7 @@ body{
 /* 날씨제보 html 영역 */
 #head-in2{
   padding-top: 8px;
-  font-size: 37px;
+  font-size: 3em;
   font-family: 'SeoulNamsanM';
   margin: 40px 20px 45px 20px;
   line-height: 1.5em;
@@ -244,7 +244,7 @@ body{
     height: fit-content;
 }
 #give_tip{
-    font-size: 2.3em;
+    font-size: 2.8em;
     margin: 1em;
     text-align: center;
 }
@@ -299,11 +299,15 @@ body{
     background-color: rgba(227, 232, 242, 0.81);
     text-align: center;
     display: inline-block;
+    position: fixed;
+    bottom: 0;
+
 }
 ul{
     list-style: none;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     padding: 10px;
 }
 .turtle-feel{
