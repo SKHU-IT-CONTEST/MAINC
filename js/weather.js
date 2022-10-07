@@ -1,10 +1,10 @@
 //온도 fetch 이용해서 임의로 가져온것
-fetch('http://api3.skhuweather.kro.kr/api/schoolNotice')
+fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => { 
-        console.log(json[0].num) 
+        console.log(json[20221007.1800].PTY) 
         const el = document.querySelector('#temperature')
-        el.innerHTML=json[0].num
+        el.innerHTML=json[20221007.1800].PTY
     })
 //
     function detectMobileDevice(agent) {
