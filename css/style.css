@@ -37,8 +37,6 @@ body{
     background-color: white;
     border-radius: 25px;
     padding: 0.5em 0.5em 0.5em 1em;
-
-
 }
 .material-icons {
     font-family: 'Material Icons';
@@ -47,7 +45,7 @@ body{
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  }
+}
 .material-icons-outlined {
     font-family: 'Material Icons';
     position: relative;
@@ -57,7 +55,7 @@ body{
     text-rendering: optimizeLegibility;
     color: white;
     text-shadow: 5px 5px 10px black;
-  }
+}
 .text-box{
     border-radius: 30px;
     background-color: white;
@@ -90,14 +88,14 @@ body{
 }
 .cloudy{
     font-size: xx-large;
+    font-weight: bold;
     padding: 10px 10px 10px 0px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
     margin: 0px 20px 0px 20px;
 }
 .water{
     font-size: xx-large;
+    font-weight: bold;
     padding: 10px 10px 10px 0px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
     margin: 0px 20px 0px 20px;
 }
 .skhu-turtle{
