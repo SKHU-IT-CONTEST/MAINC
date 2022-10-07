@@ -133,21 +133,20 @@
       <div id="container"></div>
     </div>
 
+    <!-- 라이브리 사이즈나 해상도 적절하게 조절 부탁드려요! 현재는 그냥 넣어두기만 한 상태입니다!-->
     <div>
       <!-- 라이브리 시티 설치 코드 (테스트용) -->
         <div id="lv-container" data-id="city" data-uid="MTAyMC81NzM4OC8zMzg1Mg==">
         <script type="text/javascript">
-           (function(d, s) {
-               var j, e = d.getElementsByTagName(s)[0];
+          (function(d, s) {
+              var j, e = d.getElementsByTagName(s)[0];
+              if (typeof LivereTower === 'function') { return; }
+              j = d.createElement(s);
+              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+              j.async = true;
         
-               if (typeof LivereTower === 'function') { return; }
-        
-               j = d.createElement(s);
-               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-               j.async = true;
-        
-               e.parentNode.insertBefore(j, e);
-           })(document, 'script');
+              e.parentNode.insertBefore(j, e);
+          })(document, 'script');
         </script>
         <noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
         </div>
