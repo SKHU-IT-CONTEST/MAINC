@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 *{
     margin: 0px;
-    font-family: 'SeoulNamsanM';
+    /* font-family: 'SeoulNamsanM'; */
 }
 html, body {
     height: 100%;
@@ -69,18 +69,32 @@ body{
 }
 .location{
     font-size: xx-large;
-    font-weight: lighter;
+    font-weight: 600;
     display: inline-flex;
     flex-direction: row;
+    position: relative;
+    bottom: -0.5em;
+    left: -0.5em;
+    letter-spacing: -0.04em;
 }
 .temp{
-    font-size: 4em;
-    padding: 40px;
+    font-size: 6em;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
+    position: relative;
+    bottom: -5rem;
+    left: 0.7em;
+    height: 0em;
+}
+.temp2{
+    font-size: xx-large;
+}
+.temp3{
+    font-size: xx-large;
 }
 .weather-icon{
     position: relative;
-    top: 40px;
+    /* top: 40px; */
+    /*사분할 맞추기 위해 지웠습니당*/
     padding-right: 0px;
 }
 .temp-box{
@@ -91,13 +105,13 @@ body{
 .cloudy{
     font-size: xx-large;
     font-weight: bold;
-    padding: 10px 10px 10px 0px;
+    padding: 0.1em;
     margin: 0px 20px 0px 20px;
 }
 .water{
     font-size: xx-large;
     font-weight: bold;
-    padding: 10px 10px 10px 0px;
+    padding: 0.1em;
     margin: 0px 20px 0px 20px;
 }
 .skhu-turtle{
@@ -108,17 +122,17 @@ body{
 
 }
 .turtle-box{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+    display: inline-flex;
+    height: 8em;
+
 }
 
 .turtle-icon{
     position: relative;
-    bottom: 2.2em;
-    right: 3.4em;
-    padding: 0px 0px 0px 0px;
+    bottom: 7.2em;
+    padding: 0px 0px 0px 7em;
     margin: 0px 0px 0px 0px;
+    height: 15em;
 }
 
 /* 파트3 버튼 스타일 */
