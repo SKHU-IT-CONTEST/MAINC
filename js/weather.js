@@ -33,6 +33,13 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         const el = document.querySelector('#waterData')
         el.innerHTML=json[reIndex].REH
     })
+fetch('https://api3.skhuweather.kro.kr/getWeather')
+    .then(response => response.json())
+    .then(json => { 
+        console.log(json[reIndex].PTY+SKY) 
+        const el = document.querySelector('#cloudyData')
+        el.innerHTML=json[reIndex].PTY+SKY
+    })
 //모바일 확인 js 코드
     function detectMobileDevice(agent) {
         const mobileRegex = [

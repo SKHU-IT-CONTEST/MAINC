@@ -81,8 +81,8 @@ body{
     font-size: 6em;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
     position: relative;
-    bottom: -5rem;
-    left: 0.7em;
+    bottom: -4rem;
+    left: 1.4em;
     height: 0em;
 }
 .temp2{
@@ -96,6 +96,7 @@ body{
     /* top: 40px; */
     /*사분할 맞추기 위해 지웠습니당*/
     padding-right: 0px;
+    height: 11em;
 }
 .temp-box{
     display: flex;
