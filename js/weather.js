@@ -3,25 +3,25 @@
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => { 
-        console.log(json[20221007.1600].T1H) 
+        console.log(json[0].T1H) 
         const el = document.querySelector('#temperature')
-        el.innerHTML=json[20221007.1600].T1H
+        el.innerHTML=json[0].T1H
     })
 //강수량
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => { 
-        console.log(json[20221007.1600].RN1) 
+        console.log(json['20221008.1200'].RN1) 
         const el = document.querySelector('#cloudyData')
-        el.innerHTML=json[20221007.1600].RN1
+        el.innerHTML=json['20221008.1200'].RN1
     })
 //습도
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => { 
-        console.log(json[20221007.1600].REH) 
+        console.log(json['20221008.1200'].REH) 
         const el = document.querySelector('#waterData')
-        el.innerHTML=json[20221007.1600].REH
+        el.innerHTML=json['20221008.1200'].REH
     })
 //모바일 확인 js 코드
     function detectMobileDevice(agent) {
