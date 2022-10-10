@@ -1,7 +1,5 @@
 //온도 fetch 이용해서 임의로 가져온것
-
 //json코드가 배열이 아니기 때문에 index로 못 가져온다.
-
 const date = new Date();//Date 객체 생성
 const year = date.getFullYear(); //년도 가져오기
 const month =String(date.getMonth()+1).padStart(2, "0");  //2자릿수 만들고 왼쪽부터 0넣기(데이터가 2자릿수이면 2자릿수 그대로 출력)
@@ -59,26 +57,24 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
 //모바일 확인 js 코드
     function detectMobileDevice(agent) {
         const mobileRegex = [
-          /Android/i,
-          /iPhone/i,
-          /iPad/i,
-          /iPod/i,
-          /BlackBerry/i,
-          /Windows Phone/i
+        /Android/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
         ]
-      
+    
         return mobileRegex.some(mobile => agent.match(mobile))
-      }
-      
-      const isMobile = detectMobileDevice(window.navigator.userAgent)
-      
-      if (isMobile) {
+    }
+    
+    const isMobile = detectMobileDevice(window.navigator.userAgent)
+    
+    if (isMobile) {
         true
-      } else {
+    } else {
         alert('쿠름이는 모바일 접속을 권장합니다!')
-      }
-
-
+    }
 
 //front-part_2//
 //시간1

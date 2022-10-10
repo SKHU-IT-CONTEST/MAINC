@@ -147,7 +147,7 @@ body{
     margin: 10px 20px;
     display: block;
     width: -webkit-fill-available;
-  }
+}
 .answerArea {
     /* height: 16.3rem; */
     overflow: scroll;
@@ -155,49 +155,46 @@ body{
     padding-left: 1em;
 }
 .inputButtonStyle, .buttonStyle {
-  font-family: 'SeoulNamsanM';
-  font-size: 35px;
-  background-color: #ffffffb0;
-  font-size: 33px;
-  padding: 0.5em 0.6em;
-  border: none;
-  border-radius: 32.5px;
-  box-shadow: 0px 5px 5px 5px gray;
-  float: left;
-  display: inline-flex;
+    font-family: 'SeoulNamsanM';
+    font-size: 35px;
+    background-color: #ffffffb0;
+    font-size: 33px;
+    padding: 0.5em 0.6em;
+    border: none;
+    border-radius: 32.5px;
+    box-shadow: 0px 5px 5px 5px gray;
+    float: left;
+    display: inline-flex;
 }
 .inputButtonStyle {
-  font-family: 'SeoulNamsanM';
-  font-size: 35px;
-  background-color: #ffffffcc;
-  font-size: 33px;
-  padding: 0.5em 0.6em;
-  border: none;
-  border-radius: 32.5px;
-  box-shadow: 0px 5px 5px 5px gray;
-  float: left;
-  display: inline-flex;
-  
-  margin: 0.2em;
-  width: 5em;
-  height: 1.2em;
+    font-family: 'SeoulNamsanM';
+    font-size: 35px;
+    background-color: #ffffffcc;
+    font-size: 33px;
+    padding: 0.5em 0.6em;
+    border: none;
+    border-radius: 32.5px;
+    box-shadow: 0px 5px 5px 5px gray;
+    float: left;
+    display: inline-flex;
+    margin: 0.2em;
+    width: 5em;
+    height: 1.2em;
 }
 .buttonStyle {
-  margin: 0.2em;
-
-  
+    margin: 0.2em;
 }
 .heartStyle {
-  position: relative;
-  color: red;
-  -webkit-text-stroke: 1px black;
-  font-size: 36px;
+position: relative;
+color: red;
+-webkit-text-stroke: 1px black;
+font-size: 36px;
 }
   /* 파트3 버튼 스타일 */
 
-  .padding {
+.padding {
     height: 171px
-  }
+}
 /* 제보하기 내가는 것 임시 방편 ㅋㅋㅋ */
 /* 하단 날씨 제보하기 영역 */
 .foot{
@@ -234,7 +231,7 @@ body{
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  }
+}
 
 .text-tip{
     font-size: 2.5rem;
@@ -244,11 +241,11 @@ body{
 
 /* 날씨제보 html 영역 */
 #head-in2{
-  padding-top: 8px;
-  font-size: 3em;
-  font-family: 'SeoulNamsanM';
-  margin: 40px 20px 45px 20px;
-  line-height: 1.5em;
+    padding-top: 8px;
+    font-size: 3em;
+    font-family: 'SeoulNamsanM';
+    margin: 40px 20px 45px 20px;
+    line-height: 1.5em;
 }
 
 #top-title{
@@ -292,7 +289,7 @@ body{
     /* background-color: transparent;
     color: white;
     text-shadow: 5px 5px 8px rgb(104, 104, 104); */
-  }
+}
 #weather-tip2{
     text-align: center;
     width: 94%;
@@ -334,7 +331,7 @@ ul{
 }
 .padding2 {
     height: 175px
-  }
+}
 #header2{
     font-weight: normal;
     letter-spacing: 1px;
