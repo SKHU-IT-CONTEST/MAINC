@@ -278,6 +278,7 @@ body{
     width: 100%;
     flex-direction: row;
     flex: 1;
+    text-align: center;
     /* flex-wrap: wrap; */
 }
 .material-icons-back {
@@ -328,6 +329,8 @@ ul{
     display: inline-block;
     text-align: center;
     width: 180px;
+    border: 0;
+    background-color:transparent;
 }
 .padding2 {
     height: 175px
