@@ -24,7 +24,6 @@
   <script src="js/schoolNotice.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/weather.js"></script>
-  <script src="js/weather(1).js"></script>
   <script src="./js/jquery-latest.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
@@ -39,7 +38,7 @@
     <!-- 맨 위에 제목 부분 -->
     <div id="header">
       <p id="head-in">성공회대학교 날씨제공 서비스<br>
-      <strong style="font: weight 700px;font-family: 'Courier New', Courier, monospace;">
+      <strong style="font: weight 700px; font-family: 'Courier New', Courier, monospace;">
         쿠름이:KURUMI
       </strong>
       </p>
@@ -72,10 +71,11 @@
         <span class="temp" id="temperature">
         </span>
         <!--날씨 아이콘-->
-        <span class="weather-icon" style="width: 15em; padding-right: 0.1em;">
+        <span class="weather-icon" id="weather-icon">
         </span>
         <!--날씨 아이콘-->
       </p>
+      
       <p class="cloudy">
         강수량(mm) :&nbsp;<span class="temp2" id="cloudyData"></span>
       </p>
@@ -89,6 +89,19 @@
         </span>
         <!-- 회부기 아이콘 -->
         <img src="./img/test1kurumisnow.png" class="turtle-icon" style="width: 16em;">
+          <script type="text/javascript" src="count.js">
+              function viewTurtle() {
+                  const viewResult = document.getElementById("turtle");
+
+                  for(let i=0; i<count_arr.length; i++) {
+                      if(count_arr[i] === 1) {
+                          viewResult.innerText = count_arr[i];
+                          // viewResult.setAttribute("src", "img/turtle_" + count_arr[i] + ".확장자");
+                      }
+                  }
+              }
+              viewTurtle();
+          </script>
         <!-- 회부기 아이콘 -->
       </p>
     </div>
@@ -170,6 +183,11 @@
       </span>
     </button>
   </div>
+<script src="js/schoolNotice.js"></script>
+<script src="js/banner.js"></script>
+<script src="js/weather.js"></script>
+<script src="./js/jquery-latest.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <!-- 하단 날씨 제보하기 영역 -->
 
 <!--로딩화면 구현-->
