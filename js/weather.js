@@ -17,16 +17,11 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         console.log(T1H) //원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기 
         const el = document.querySelector('#temperature')
         el.innerHTML=T1H;
-    })
-//아이콘
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
-        const {PTY, SKY} = json[reIndex];//원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기  
-        const el = document.querySelector('#weather-icon');
+        //아이콘
+        const {PTY, SKY} = json[reIndex];
+        const element1 = document.querySelector('#weather-icon');
         console.log(SKY, PTY);
         const code = `${SKY}${PTY}`;
-        
         const weatherIconMap = {
             10: 'sun',
             11: 'sun',
@@ -46,24 +41,15 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
             47: 'snow',
         };
         console.log(weatherIconMap);
-        el.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
-    })
-
-//강수량
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
+        element1.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
+        //강수량
         console.log(json[reIndex].RN1) 
-        const el = document.querySelector('#cloudyData')
-        el.innerHTML=json[reIndex].RN1
-    })
-//습도
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
+        const element2 = document.querySelector('#cloudyData')
+        element2.innerHTML=json[reIndex].RN1
+        //습도
         console.log(json[reIndex].REH) 
-        const el = document.querySelector('#waterData')
-        el.innerHTML=json[reIndex].REH
+        const element3 = document.querySelector('#waterData')
+        element3.innerHTML=json[reIndex].REH
     })
 
 //모바일 확인 js 코드
