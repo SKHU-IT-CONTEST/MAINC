@@ -13,12 +13,11 @@ const reIndex = `${year}${month}${day}.${hours}00`; //임시 index라는 의미,
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => { 
-        const {T1H} = json[reIndex];
+        const {T1H,PTY, SKY} = json[reIndex];
         console.log(T1H) //원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기 
         const el = document.querySelector('#temperature')
         el.innerHTML=T1H;
         //아이콘
-        const {PTY, SKY} = json[reIndex];
         const element1 = document.querySelector('#weather-icon');
         console.log(SKY, PTY);
         const code = `${SKY}${PTY}`;
