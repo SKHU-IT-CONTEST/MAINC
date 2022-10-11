@@ -104,7 +104,7 @@ var arr = [];
 
 // 입력값을 메인 페이지에 표시하는 함수
 function loaded() {
-    let tmp;
+    let tmp=0;
     const data_1 = localStorage.getItem("data1");
     const data_2 = localStorage.getItem("data2");
     const data_3 = localStorage.getItem("data3");
@@ -123,42 +123,24 @@ function loaded() {
 
     // 입력값의 최대값 탐색
     for(let j=0; j<arr.length; j++) {
-        tmp = 0;
         if(tmp < arr[j]){
-            switch(j) {
-                case 0:
-                    tmp = arr[0];
-                    continue;
-                case 1:
-                    tmp = arr[1];
-                    continue;
-                case 2:
-                    tmp = arr[2];
-                    continue;
-                case 3:
-                    tmp = arr[3];
-                    continue;
-                case 4:
-                    tmp = arr[4];
-                    continue;
-                case 5:
-                    tmp = arr[5];
-
+            if(tmp < arr[j]){
+                tmp = arr[j];
             }
         }
     }
     return tmp;
 }
-function viewCount(data){
-    var a = loaded();
-    for(let i=0; i<arr.length; i++) {
-        if(a === arr[i]) {
-            data = document.getElementsByTagName("img");
-            return data.appendChild(arr[i]);
+// function viewCount(tmp){
+//     var a = loaded();
+//     for(let i=0; i<arr.length; i++) {
+//         if(a === arr[i]) {
+//             data = document.getElementsByTagName("img");
+//             return data.appendChild(arr[i]);
             
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
 // function notDuplicate1() {
