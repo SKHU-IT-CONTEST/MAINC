@@ -133,10 +133,12 @@ function viewCount(data){
         if(a === arr[i]) {
             data = document.getElementsByTagName("img");
             return data.appendChild(arr[i]);
-
+            
         }
     }
 }
+
+
 // function notDuplicate1() {
 //     document.getElementById('button1').onclick = null;
 //     window.alert("제보 횟수는 1번만 가능합니다.");
