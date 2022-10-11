@@ -76,87 +76,45 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         alert('쿠름이는 모바일 접속을 권장합니다!')
     }
 
-//front-part_2//
-//시간1
+    //연주님 파트
+//front-part_2, 1차 개선(fetch를 한번만 사용하여 데이터를 불러옴)
+
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => { 
         console.log(date.getHours()+1+"시") 
-        const el = document.querySelector('.tmwt #time1')
+        let el = document.querySelector('.tmwt #time1')
         el.innerHTML=date.getHours()+1+"시"
-    })
 
-
-//온도1
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
-        console.log(json[reIndex1].T1H+"도") //원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기 
-        const el = document.querySelector('.tmwt #tem1')
+        console.log(json[reIndex1].T1H+"도")
+        el = document.querySelector('.tmwt #tem1')
         el.innerHTML=json[reIndex1].T1H+"도"
-    })
 
-//강수량1
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-.then(response => response.json())
-.then(json => { 
-    console.log("강수량(mm): "+json[reIndex1].RN1) 
-    const el = document.querySelector('#precipitation1')
-    el.innerHTML="강수량(mm): "+json[reIndex1].RN1
-})
+        console.log("강수량(mm): "+json[reIndex1].RN1) 
+        el = document.querySelector('#precipitation1')
+        el.innerHTML="강수량(mm): "+json[reIndex1].RN1
 
-
-//시간 2
-    fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
         console.log(date.getHours()+2+"시") 
-        const el = document.querySelector('.tmwt #time2')
+        el = document.querySelector('.tmwt #time2')
         el.innerHTML=date.getHours()+2+"시"
-    })
 
-//온도2
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
-        console.log(json[reIndex2].T1H+"도") //원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기 
-        const el = document.querySelector('.tmwt #tem2')
+        console.log(json[reIndex2].T1H+"도") 
+        el = document.querySelector('.tmwt #tem2')
         el.innerHTML=json[reIndex2].T1H+"도"
-    })
 
-//강수량2
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-.then(response => response.json())
-.then(json => { 
-    console.log("강수량(mm): "+json[reIndex2].RN1) 
-    const el = document.querySelector('#precipitation2')
-    el.innerHTML="강수량(mm): "+json[reIndex2].RN1
-})
+        console.log("강수량(mm): "+json[reIndex2].RN1) 
+        el = document.querySelector('#precipitation2')
+        el.innerHTML="강수량(mm): "+json[reIndex2].RN1
+    
+        console.log(date.getHours()+3+"시") 
+        el = document.querySelector('.tmwt #time3')
+        el.innerHTML=date.getHours()+3+"시"
 
-
-//시간3
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-.then(response => response.json())
-.then(json => { 
-    console.log(date.getHours()+3+"시") 
-    const el = document.querySelector('.tmwt #time3')
-    el.innerHTML=date.getHours()+3+"시"
-})
-
-//온도3
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-    .then(response => response.json())
-    .then(json => { 
-        console.log(json[reIndex3].T1H+"도") //원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기 
-        const el = document.querySelector('.tmwt #tem3')
+        console.log(json[reIndex3].T1H+"도")
+        el = document.querySelector('.tmwt #tem3')
         el.innerHTML=json[reIndex3].T1H+"도"
-    })
 
-//강수량3
-fetch('https://api3.skhuweather.kro.kr/getWeather')
-.then(response => response.json())
-.then(json => { 
-    console.log("강수량(mm): "+json[reIndex3].RN1) 
-    const el = document.querySelector('#precipitation3')
-    el.innerHTML="강수량(mm): "+json[reIndex3].RN1
+        console.log("강수량(mm): "+json[reIndex3].RN1) 
+        el = document.querySelector('#precipitation3')
+        el.innerHTML="강수량(mm): "+json[reIndex3].RN1
 })
