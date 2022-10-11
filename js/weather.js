@@ -1,10 +1,10 @@
-date = new Date();//Date 객체 생성
-year = date.getFullYear(); //년도 가져오기
-month = String(date.getMonth()+1).padStart(2, "0");  //2자릿수 만들고 왼쪽부터 0넣기(데이터가 2자릿수이면 2자릿수 그대로 출력)
-day = String(date.getDate()).padStart(2, "0");  //month와 동일한 방식
-hour = date.getHours();
-hours = String(date.getHours()).padStart(2, "0"); //month와 동일한 방식
-reIndex = `${year}${month}${day}.${hours}00`; //임시 index라는 의미, 백틱 사용해서 json 형태와 똑같이 뽑아내기, 분은 안뽑아냄.
+const date = new Date();//Date 객체 생성
+const year = date.getFullYear(); //년도 가져오기
+const month = String(date.getMonth()+1).padStart(2, "0");  //2자릿수 만들고 왼쪽부터 0넣기(데이터가 2자릿수이면 2자릿수 그대로 출력)
+const day = String(date.getDate()).padStart(2, "0");  //month와 동일한 방식
+const hour = date.getHours();
+const hours = String(date.getHours()).padStart(2, "0"); //month와 동일한 방식
+const reIndex = `${year}${month}${day}.${hours}00`; //임시 index라는 의미, 백틱 사용해서 json 형태와 똑같이 뽑아내기, 분은 안뽑아냄.
 
 //온도
 fetch('https://api3.skhuweather.kro.kr/getWeather')
