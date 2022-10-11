@@ -118,8 +118,8 @@ body{
 .skhu-turtle{
     font-size: xx-large;
     padding: 0.5em 0em 0em 0.7em;
-    width: 65%;  
-    line-height: 1.5;  
+    width: 65%;
+    line-height: 1.5;
 
 }
 .turtle-box{
@@ -185,12 +185,12 @@ body{
     margin: 0.2em;
 }
 .heartStyle {
-position: relative;
-color: red;
--webkit-text-stroke: 1px black;
-font-size: 36px;
+    position: relative;
+    color: red;
+    -webkit-text-stroke: 1px black;
+    font-size: 36px;
 }
-  /* 파트3 버튼 스타일 */
+/* 파트3 버튼 스타일 */
 
 .padding {
     height: 171px
@@ -206,7 +206,7 @@ font-size: 36px;
     display: inline-block;
     margin-top: 20px;
     position : fixed;
-	bottom: 0px;
+    bottom: 0px;
     left: 0;
     /* 일단 주석 처리 -> 화면 크기에 따라서 absolute가 다른 div 들을 먹음 */
 }
@@ -217,7 +217,7 @@ font-size: 36px;
     margin: 25.5px;
     border-radius: 60px;
     background-color: #78B4EF;
-    box-shadow:0px 5px 10px grey;  
+    box-shadow:0px 5px 10px grey;
     border-style: none;
     color: white;
     display: flex;
@@ -355,4 +355,3 @@ ul{
 
 #lv-container {
 }
-

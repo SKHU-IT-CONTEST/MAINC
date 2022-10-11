@@ -9,67 +9,67 @@ let checkKo = /[ㄱ-ㅎ|ㅏ-ㅣ]/gi;
 let checkEn = /[a-z|ぁ-ゔ|ァ-ヴー|々〆〤|一-龥|0-9]/gi;
 
 function TextBox() {
-	let answertemp = document.getElementById('answer').value;
-	if(answertemp == ""){
-		alert('응답을 적어주세요!');
-	}
-	else if(checkIt(answertemp, limit)) {
-		alert('바르고 고운말을 사용해요!');
-	}
-	else if(checkKo.test(answertemp)) {
-		alert('자음 혹은 모음에게 짝꿍이 필요해요!');
-	}
-	else if(checkEn.test(answertemp)) {
-		alert('한글만 쓸 수 있어요!');
-	}
-	else if(answertemp.length >= 10 ) {
-		alert('내용이 너무 많아요!');
-	}
-	else{
-		var container = document.getElementById('container');// html에 있는 container id를 container에 부여
-		
-		let AnswerButton = document.createElement('button');
-		AnswerButton.className = 'buttonStyle';
-		AnswerButton.id = 'answerButton';
-		container.appendChild(AnswerButton);
+    let answertemp = document.getElementById('answer').value;
+    if(answertemp == ""){
+        alert('응답을 적어주세요!');
+    }
+    else if(checkIt(answertemp, limit)) {
+        alert('바르고 고운말을 사용해요!');
+    }
+    else if(checkKo.test(answertemp)) {
+        alert('자음 혹은 모음에게 짝꿍이 필요해요!');
+    }
+    else if(checkEn.test(answertemp)) {
+        alert('한글만 쓸 수 있어요!');
+    }
+    else if(answertemp.length >= 10 ) {
+        alert('내용이 너무 많아요!');
+    }
+    else{
+        var container = document.getElementById('container');// html에 있는 container id를 container에 부여
 
-		
-		var AnswerText = document.createTextNode(answertemp);
-		AnswerText.className = "answerText";
-		AnswerButton.appendChild(AnswerText);
+        let AnswerButton = document.createElement('button');
+        AnswerButton.className = 'buttonStyle';
+        AnswerButton.id = 'answerButton';
+        container.appendChild(AnswerButton);
 
-		var HeartText = document.createElement('heart');
-		// HeartText.className = 'heartStyle';
-		HeartText.innerHTML = '&nbsp;<img src="img/heart.svg"/>';
-		AnswerButton.appendChild(HeartText);
 
-		// 서버에서 응답한 사용자를 받아와 숫자로 표현해줄 기능
-		var answerNum = document.createElement('answerNum');
-		answerNum.innerHTML = "&nbsp;"+Math.floor(Math.random() * 10);
-		answerNum.className = "answerText";
-		AnswerButton.appendChild(answerNum);
+        var AnswerText = document.createTextNode(answertemp);
+        AnswerText.className = "answerText";
+        AnswerButton.appendChild(AnswerText);
 
-		document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
-	}
+        var HeartText = document.createElement('heart');
+        // HeartText.className = 'heartStyle';
+        HeartText.innerHTML = '&nbsp;<img src="img/heart.svg"/>';
+        AnswerButton.appendChild(HeartText);
+
+        // 서버에서 응답한 사용자를 받아와 숫자로 표현해줄 기능
+        var answerNum = document.createElement('answerNum');
+        answerNum.innerHTML = "&nbsp;"+Math.floor(Math.random() * 10);
+        answerNum.className = "answerText";
+        AnswerButton.appendChild(answerNum);
+
+        document.getElementById('answer').value = ""; //입력 칸을 빈칸으로
+    }
 }
 // 비속어 찾는 for문
 function checkIt(v, l) {
-for(i=0;i<l;i++)
-{
-if(v.indexOf(checkStr[i]) != -1)
-{
-return 1;
-}
-}
-return 0;
+    for(i=0;i<l;i++)
+    {
+        if(v.indexOf(checkStr[i]) != -1)
+        {
+            return 1;
+        }
+    }
+    return 0;
 }
 // 특수문자 입력 방지
 function characterCheck(obj){
-	let regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+┼<>@\#$%&\'\"\\\(\=]/gi; 
-	// 허용할 특수문자는 여기서 삭제하면 됨
-	// 지금은 띄어쓰기도 특수문자 처리됨 참고하셈
-	if( regExp.test(obj.value) ){
-		alert("특수문자는 입력할 수 없어요!");
-		obj.value = obj.value.substring( 0 , obj.value.length - 1 ); // 입력한 특수문자 한자리 지움
-	}
+    let regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+┼<>@\#$%&\'\"\\\(\=]/gi;
+    // 허용할 특수문자는 여기서 삭제하면 됨
+    // 지금은 띄어쓰기도 특수문자 처리됨 참고하셈
+    if( regExp.test(obj.value) ){
+        alert("특수문자는 입력할 수 없어요!");
+        obj.value = obj.value.substring( 0 , obj.value.length - 1 ); // 입력한 특수문자 한자리 지움
+    }
 }

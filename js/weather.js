@@ -9,7 +9,7 @@ const reIndex = `${year}${month}${day}.${hours}00`; //임시 index라는 의미,
 //온도
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
-    .then(json => { 
+    .then(json => {
         const {T1H,PTY, SKY} = json[reIndex];
 
         console.log(json[reIndex].T1H) //원래 '20221004.1400' 넣어야 할 부분에 위에서 가져온 데이터와 비교하여 일치하면 넣기 
@@ -25,47 +25,47 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         };
         console.log(weatherIconMap);
         element1.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
-        
+
         //강수량
-        console.log(json[reIndex].RN1) 
+        console.log(json[reIndex].RN1)
         el = document.querySelector('#cloudyData')
         el.innerHTML=json[reIndex].RN1
 
         //습도
-        console.log(json[reIndex].REH) 
+        console.log(json[reIndex].REH)
         el = document.querySelector('#waterData')
         el.innerHTML=json[reIndex].REH
     })
 
 //모바일 확인 js 코드
-    function detectMobileDevice(agent) {
-        const mobileRegex = [
+function detectMobileDevice(agent) {
+    const mobileRegex = [
         /Android/i,
         /iPhone/i,
         /iPad/i,
         /iPod/i,
         /BlackBerry/i,
         /Windows Phone/i
-        ]
-    
-        return mobileRegex.some(mobile => agent.match(mobile))
-    }
-    
-    isMobile = detectMobileDevice(window.navigator.userAgent)
-    
-    if (isMobile) {
-        true
-    } else {
-        alert('쿠름이는 모바일 접속을 권장합니다!')
-    }
+    ]
 
-    //연주님 파트
+    return mobileRegex.some(mobile => agent.match(mobile))
+}
+
+isMobile = detectMobileDevice(window.navigator.userAgent)
+
+if (isMobile) {
+    true
+} else {
+    alert('쿠름이는 모바일 접속을 권장합니다!')
+}
+
+//연주님 파트
 //front-part_2, 1차 개선(fetch를 한번만 사용하여 데이터를 불러옴)
 
 fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
-    .then(json => { 
-        console.log(date.getHours()+1+"시") 
+    .then(json => {
+        console.log(date.getHours()+1+"시")
         let el = document.querySelector('.tmwt #time1')
         el.innerHTML=date.getHours()+1+"시"
 
@@ -73,23 +73,23 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         el = document.querySelector('.tmwt #tem1')
         el.innerHTML=json[reIndex].T1H+"도"
 
-        console.log("강수량(mm): "+json[reIndex].RN1) 
+        console.log("강수량(mm): "+json[reIndex].RN1)
         el = document.querySelector('#precipitation1')
         el.innerHTML="강수량(mm): "+json[reIndex].RN1
 
-        console.log(date.getHours()+2+"시") 
+        console.log(date.getHours()+2+"시")
         el = document.querySelector('.tmwt #time2')
         el.innerHTML=date.getHours()+2+"시"
 
-        console.log(json[reIndex].T1H+"도") 
+        console.log(json[reIndex].T1H+"도")
         el = document.querySelector('.tmwt #tem2')
         el.innerHTML=json[reIndex].T1H+"도"
 
-        console.log("강수량(mm): "+json[reIndex].RN1) 
+        console.log("강수량(mm): "+json[reIndex].RN1)
         el = document.querySelector('#precipitation2')
         el.innerHTML="강수량(mm): "+json[reIndex].RN1
-    
-        console.log(date.getHours()+3+"시") 
+
+        console.log(date.getHours()+3+"시")
         el = document.querySelector('.tmwt #time3')
         el.innerHTML=date.getHours()+3+"시"
 
@@ -97,7 +97,7 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         el = document.querySelector('.tmwt #tem3')
         el.innerHTML=json[reIndex].T1H+"도"
 
-        console.log("강수량(mm): "+json[reIndex].RN1) 
+        console.log("강수량(mm): "+json[reIndex].RN1)
         el = document.querySelector('#precipitation3')
         el.innerHTML="강수량(mm): "+json[reIndex].RN1
-})
+    })
