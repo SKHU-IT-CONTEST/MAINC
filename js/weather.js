@@ -72,24 +72,13 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => {
         console.log(date.getHours()+1+"시")
-        let el = document.querySelector('.tmwt #time1')
+        el = document.querySelector('.tmwt #time1')
         el.innerHTML=date.getHours()+1+"시"
 
         console.log(json[reIndex1].T1H+"도")
         el = document.querySelector('.tmwt #tem1')
         el.innerHTML=json[reIndex1].T1H+"도"
-
-         //아이콘
-         const element1 = document.querySelector('#weatherimg1');
-         console.log(SKY, PTY);
-         const code = `${SKY}${PTY}`;
-         const weatherIconMap = {
-             10: 'sun',11: 'sun',41: 'rain',42: 'rain',45: 'rain',31: 'rain',32: 'rain',35: 'rain',30: 'cloud',40: 'cloud',33: 'snow',36: 'snow',37: 'snow',43: 'snow',46: 'snow',47: 'snow',
-         };
-         console.log(weatherIconMap);
-         element1.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
  
-
         console.log("강수량(mm): "+json[reIndex1].RN1)
         el = document.querySelector('#precipitation1')
         el.innerHTML="강수량(mm): "+json[reIndex1].RN1
@@ -101,7 +90,7 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         console.log(json[reIndex2].T1H+"도")
         el = document.querySelector('.tmwt #tem2')
         el.innerHTML=json[reIndex2].T1H+"도"
-
+        
         console.log("강수량(mm): "+json[reIndex2].RN1)
         el = document.querySelector('#precipitation2')
         el.innerHTML="강수량(mm): "+json[reIndex2].RN1
@@ -118,5 +107,16 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         el = document.querySelector('#precipitation3')
         el.innerHTML="강수량(mm): "+json[reIndex3].RN1
 
+        //아이콘
+         const element1 = document.querySelector('#weatherimg1');
+         const element2 = document.querySelector('#weatherimg2');
+         const element3 = document.querySelector('#weatherimg3');
+         console.log(SKY, PTY);
+         const code = `${SKY}${PTY}`;
+         const weatherIconMap = {
+             10: 'sun',11: 'sun',41: 'rain',42: 'rain',45: 'rain',31: 'rain',32: 'rain',35: 'rain',30: 'cloud',40: 'cloud',33: 'snow',36: 'snow',37: 'snow',43: 'snow',46: 'snow',47: 'snow',
+         };
+         console.log(weatherIconMap);
+         element1.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
 
     })
