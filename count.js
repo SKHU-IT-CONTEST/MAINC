@@ -1,3 +1,5 @@
+
+// 제보를 위해 이미지를 클릭한 횟수를 저장할 변수 선언
 let count1 = 0;
 let count2 = 0;
 let count3 = 0;
@@ -6,6 +8,8 @@ let count5 = 0;
 let count6 = 0;
 var count_arr = [count1, count2, count3, count4, count5, count6];
 
+
+// 중복 방지를 위한 함수 정의
 var doubleSubmitFlag = false;
 
 function doubleSubmitCheck() {
@@ -18,8 +22,8 @@ function doubleSubmitCheck() {
 
 }
 
-function insert() {
 
+function insert() {
 
     const button1 = document.getElementById("button1");
     const button2 = document.getElementById("button2");
@@ -42,8 +46,6 @@ function insert() {
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
-
-
     });
 
     button2.addEventListener("click", function () {
@@ -91,10 +93,50 @@ function insert() {
     });
 }
 
+localStorage.setItem("data1", count_arr[0]);
+localStorage.setItem("data2", count_arr[1]);
+localStorage.setItem("data3", count_arr[2]);
+localStorage.setItem("data4", count_arr[3]);
+localStorage.setItem("data5", count_arr[4]);
+localStorage.setItem("data6", count_arr[5]);
+var arr = [];
+// 입력값을 메인 페이지에 표시하는 함수
+function loaded() {
+    let tmp;
+    const data_1 = localStorage.getItem("data1");
+    const data_2 = localStorage.getItem("data2");
+    const data_3 = localStorage.getItem("data3");
+    const data_4 = localStorage.getItem("data4");
+    const data_5 = localStorage.getItem("data5");
+    const data_6 = localStorage.getItem("data6");
 
 
+    arr.push(data_1);
+    arr.push(data_2);
+    arr.push(data_3);
+    arr.push(data_4);
+    arr.push(data_5);
+    arr.push(data_6);
 
+    // 입력값의 최대값 탐색
+    for(let j=0; j<arr.length; j++) {
+        tmp = arr[j];
+        if(tmp < arr[j]){
+            tmp = arr[j];
+        }
+    }
+    return tmp;
+}
+function viewCount(data){
+    var a = loaded();
+    for(let i=0; i<arr.length; i++) {
+        if(a === arr[i]) {
+            data = document.getElementsByTagName("img");
+            return data.appendChild(arr[i]);
 
+        }
+    }
+}
 // function notDuplicate1() {
 //     document.getElementById('button1').onclick = null;
 //     window.alert("제보 횟수는 1번만 가능합니다.");

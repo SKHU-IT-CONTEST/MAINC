@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-  <script src="js/button.js"></script>
+
   <script src="js/schoolNotice.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/weather.js"></script>
@@ -86,24 +86,14 @@
       <p class="turtle-box">
         <span class="skhu-turtle">
           쿠름이는 지금<br>
-          눈과 노는 중!
+          눈과 노는 중!<br>
+
         </span>
+
         <!-- 회부기 아이콘 -->
         <img src="./img/test1kurumisnow.png" class="turtle-icon" style="width: 16em;">
-          <script type="text/javascript" src="count.js">
-              function viewTurtle() {
-                  const viewResult = document.getElementById("turtle");
-
-                  for(let i=0; i<count_arr.length; i++) {
-                      if(count_arr[i] === 1) {
-                          viewResult.innerText = count_arr[i];
-                          // viewResult.setAttribute("src", "img/turtle_" + count_arr[i] + ".확장자");
-                      }
-                  }
-              }
-              viewTurtle();
-          </script>
         <!-- 회부기 아이콘 -->
+
       </p>
     </div>
     <div class="stu-respo">
@@ -205,6 +195,8 @@ $(window).load(function () {
 });
   </script>
     loading 화면 JS End-->
+<script src="js/button.js"></script>
+<script src="count.js"></script>
 </body>
 
 
