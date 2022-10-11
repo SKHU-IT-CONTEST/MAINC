@@ -100,9 +100,11 @@ localStorage.setItem("data4", count_arr[3]);
 localStorage.setItem("data5", count_arr[4]);
 localStorage.setItem("data6", count_arr[5]);
 var arr = [];
+
+
 // 입력값을 메인 페이지에 표시하는 함수
 function loaded() {
-    let tmp;
+    let tmp=0;
     const data_1 = localStorage.getItem("data1");
     const data_2 = localStorage.getItem("data2");
     const data_3 = localStorage.getItem("data3");
@@ -118,25 +120,29 @@ function loaded() {
     arr.push(data_5);
     arr.push(data_6);
 
+
     // 입력값의 최대값 탐색
     for(let j=0; j<arr.length; j++) {
-        tmp = arr[j];
         if(tmp < arr[j]){
-            tmp = arr[j];
+            if(tmp < arr[j]){
+                tmp = arr[j];
+            }
         }
     }
     return tmp;
 }
-function viewCount(data){
-    var a = loaded();
-    for(let i=0; i<arr.length; i++) {
-        if(a === arr[i]) {
-            data = document.getElementsByTagName("img");
-            return data.appendChild(arr[i]);
+// function viewCount(tmp){
+//     var a = loaded();
+//     for(let i=0; i<arr.length; i++) {
+//         if(a === arr[i]) {
+//             data = document.getElementsByTagName("img");
+//             return data.appendChild(arr[i]);
+            
+//         }
+//     }
+// }
 
-        }
-    }
-}
+
 // function notDuplicate1() {
 //     document.getElementById('button1').onclick = null;
 //     window.alert("제보 횟수는 1번만 가능합니다.");
