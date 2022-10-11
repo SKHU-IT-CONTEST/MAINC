@@ -21,22 +21,7 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         console.log(SKY, PTY);
         const code = `${SKY}${PTY}`;
         const weatherIconMap = {
-            10: 'sun',
-            11: 'sun',
-            41: 'rain',
-            42: 'rain',
-            45: 'rain',
-            31: 'rain',
-            32: 'rain',
-            35: 'rain',
-            30: 'cloud',
-            40: 'cloud',
-            33: 'snow',
-            36: 'snow',
-            37: 'snow',
-            43: 'snow',
-            46: 'snow',
-            47: 'snow',
+            10: 'sun',11: 'sun',41: 'rain',42: 'rain',45: 'rain',31: 'rain',32: 'rain',35: 'rain',30: 'cloud',40: 'cloud',33: 'snow',36: 'snow',37: 'snow',43: 'snow',46: 'snow',47: 'snow',
         };
         console.log(weatherIconMap);
         element1.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
