@@ -93,17 +93,28 @@ function insert() {
     });
 }
 
-localStorage.setItem("data1", count_arr[0]);
-localStorage.setItem("data2", count_arr[1]);
-localStorage.setItem("data3", count_arr[2]);
-localStorage.setItem("data4", count_arr[3]);
-localStorage.setItem("data5", count_arr[4]);
-localStorage.setItem("data6", count_arr[5]);
-var arr = [];
 
 
 // 입력값을 메인 페이지에 표시하는 함수
 function loaded() {
+
+    const textHolder1 = document.getElementById("count1");
+    const textHolder2 = document.getElementById("count2");
+    const textHolder3 = document.getElementById("count3");
+    const textHolder4 = document.getElementById("count4");
+    const textHolder5 = document.getElementById("count5");
+    const textHolder6 = document.getElementById("count6");
+    var textHolder_arr = [textHolder1, textHolder2, textHolder3, textHolder4, textHolder5, textHolder6];
+
+
+    localStorage.setItem("data1", count_arr[0]);
+    localStorage.setItem("data2", count_arr[1]);
+    localStorage.setItem("data3", count_arr[2]);
+    localStorage.setItem("data4", count_arr[3]);
+    localStorage.setItem("data5", count_arr[4]);
+    localStorage.setItem("data6", count_arr[5]);
+    var arr = [];
+    resetData();
     let tmp=0;
     const data_1 = localStorage.getItem("data1");
     const data_2 = localStorage.getItem("data2");
@@ -123,13 +134,31 @@ function loaded() {
 
     // 입력값의 최대값 탐색
     for(let j=0; j<arr.length; j++) {
-        if(tmp < arr[j]){
+        let tmp = 0;
             if(tmp < arr[j]){
                 tmp = arr[j];
             }
+
+    }
+
+    for(let k=0; k<textHolder_arr.length; k++) {
+        if(textHolder_arr[k] === arr[k]) {
+            const initText = document.getElementById('skhu-turtle');
+            initText.appendChild(tmp);
+        }
+
+    }
+}
+
+function resetData() {
+    let nowDate = new Date();
+    if(nowDate.getHours() === 6 && nowDate.getHours() === 12
+        && nowDate.getHours() === 18 && nowDate.getHours() === 0o0) {
+        for(let i=0; i<count_arr.length; i++) {
+            count_arr[i] = 0;
         }
     }
-    return tmp;
+
 }
 // function viewCount(tmp){
 //     var a = loaded();
