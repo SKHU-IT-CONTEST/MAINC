@@ -8,6 +8,4 @@
 
 아래 사진은 최종 기획 UI입니다. 
 
-![X](https://user-images.githubusercontent.com/83647215/195477159-0abadbb8-fc87-47b1-89bf-97d2b0cafabb.png)
-
-![2nd screen](https://user-images.githubusercontent.com/83647215/195541993-92d56be9-93c3-4137-9c36-43f6c2525747.png)
+<img width="831" alt="스크린샷 2022-10-13 오후 5 23 52" src="https://user-images.githubusercontent.com/83647215/195543183-bb8b5d0e-bf2a-4886-9ba3-a85e2f573f42.png">
