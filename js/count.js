@@ -58,8 +58,7 @@ function insert() {
     button1.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder1.innerHTML = (++count1).toString();
-            localStorage.setItem("data1", count1.toString());
+            textHolder1.innerHTML = countData1();
         } else
             alert("제보는 1번만 가능합니다.");
     });
@@ -67,24 +66,24 @@ function insert() {
     button2.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder2.innerHTML =(++count2).toString();
-            localStorage.setItem("data2", count2.toString());
+            textHolder2.innerHTML = countData2();
+
         } else alert("제보는 1번만 가능합니다.");
 
     });
     button3.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder3.innerHTML = (++count3).toString();
-            localStorage.setItem("data3", count3.toString());
+            textHolder3.innerHTML = countData3();
+
         } else alert("제보는 1번만 가능합니다.");
 
     });
     button4.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder4.innerHTML = (++count4).toString();
-            localStorage.setItem("data4", count4.toString());
+            textHolder4.innerHTML = countData4();
+
         } else alert("제보는 1번만 가능합니다.");
 
 
@@ -92,8 +91,8 @@ function insert() {
     button5.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder5.innerHTML = (++count5).toString();
-            localStorage.setItem("data5", count5.toString());
+            textHolder5.innerHTML = countData5();
+
         } else alert("제보는 1번만 가능합니다.");
 
 
@@ -101,8 +100,8 @@ function insert() {
     button6.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder6.innerHTML = (++count6).toString();
-            localStorage.setItem("data6", (count6).toString());
+            textHolder6.innerHTML = countData6();
+
         } else alert("제보는 1번만 가능합니다.");
 
     });
@@ -140,375 +139,66 @@ function insert() {
 
     function resetData() {
         let nowDate = new Date();
-        if (nowDate.getHours() === 0o3 || nowDate.getHours() === 0o6 ||
-            nowDate.getHours() === 9 || nowDate.getHours() === 12||
-            nowDate.getHours() === 15 ||  nowDate.getHours() === 18
-            || nowDate.getHours() === 21 || nowDate.getHours() === 0o0) {
+
+        if (nowDate.getHours() === 0o3 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
+            nowDate.getHours() === 0o6&& nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
+            nowDate.getHours() === 9 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
+            nowDate.getHours() === 12 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
+            nowDate.getHours() === 15 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00||
+            nowDate.getHours() === 18 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
+            nowDate.getHours() === 21 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
+            nowDate.getHours() === 0o0 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00) {
             for (let i = 0; i < count_arr.length; i++) {
-                count1 = 0; count2 = 0; count3 = 0; count4 = 0; count5 = 0; count6 = 0;
+               var countTmp_1 = localStorage.getItem("data1"); countTmp_1 = 0;
+               var countTmp_2 = localStorage.getItem("data2"); countTmp_2 = 0;
+               var countTmp_3 = localStorage.getItem("data3"); countTmp_3 = 0;
+               var countTmp_4 = localStorage.getItem("data4"); countTmp_4 = 0;
+               var countTmp_5 = localStorage.getItem("data5"); countTmp_5 = 0;
+               var countTmp_6 = localStorage.getItem("data6"); countTmp_6 = 0;
+
+               localStorage.setItem("data1", countTmp_1.toString());
+               localStorage.setItem("data2", countTmp_2.toString());
+               localStorage.setItem("data3", countTmp_3.toString());
+               localStorage.setItem("data4", countTmp_4.toString());
+               localStorage.setItem("data5", countTmp_5.toString());
+               localStorage.setItem("data6", countTmp_6.toString());
             }
         }
     }
 
-    // window.onpageshow = function (event) {
-    //     if(event.persisted || (window.performance && (window.performance.navigation.type === 1 || window.performance.navigation.type === 2))) {
-    //         if(('localStorage' in window) && window['localStorage'] !== null) {
-    //             if(localStorage.getItem('data1') && localStorage.getItem('data2') && localStorage.getItem('data3')
-    //                 && localStorage.getItem('data4') && localStorage.getItem('data5') && localStorage.getItem('data6') ) {
-    //
-    //                 window.localStorage.getItem("data1");
-    //                 window.localStorage.getItem("data2");
-    //                 window.localStorage.getItem("data3");
-    //                 window.localStorage.getItem("data4");
-    //                 window.localStorage.getItem("data5");
-    //                 window.localStorage.getItem("data6");
-    //             }
-    //         }
-    //     }
-    // }
+    function countData1() {
+        let countOneOnclick_1 = localStorage.getItem("data1"); countOneOnclick_1++;
+        localStorage.setItem("data1", countOneOnclick_1.toString());
+        return countOneOnclick_1;
+
+    }
+    function countData2() {
+        let countOneOnclick_2 = localStorage.getItem("data2"); countOneOnclick_2++;
+        localStorage.setItem("data2", countOneOnclick_2.toString());
+        return countOneOnclick_2;
+    }
+
+
+    function countData3() {
+        let countOneOnclick_3 = localStorage.getItem("data3"); countOneOnclick_3++;
+        localStorage.setItem("data3", countOneOnclick_3.toString());
+        return countOneOnclick_3;
+    }
+    function countData4() {
+        let countOneOnclick_4 = localStorage.getItem("data4"); countOneOnclick_4++;
+        localStorage.setItem("data4", countOneOnclick_4.toString());
+        return countOneOnclick_4;
+
+    }
+    function countData5() {
+        let countOneOnclick_5 = localStorage.getItem("data5"); countOneOnclick_5++;
+        localStorage.setItem("data5", countOneOnclick_5.toString());
+        return countOneOnclick_5;
+    }
+    function countData6() {
+        let countOneOnclick_6 = localStorage.getItem("data6"); countOneOnclick_6++;
+        localStorage.setItem("data6", countOneOnclick_6.toString());
+        return countOneOnclick_6;
+
+    }
 }
-
-
-// 입력값을 메인 페이지에 표시하는 함수
-
-// function viewCount(tmp){
-//     var a = loaded();
-//     for(let i=0; i<arr.length; i++) {
-//         if(a === arr[i]) {
-//             data = document.getElementsByTagName("img");
-//             return data.appendChild(arr[i]);
-
-//         }
-//     }
-// }
-
-
-// function notDuplicate1() {
-//     document.getElementById('button1').onclick = null;
-//     window.alert("제보 횟수는 1번만 가능합니다.");
-// }
-// function notDuplicate2() {
-//     document.getElementById('button2').onclick = null;
-//     window.alert("제보 횟수는 1번만 가능합니다.");
-// }
-// function notDuplicate3() {
-//     document.getElementById('button3').onclick = null;
-//     window.alert("제보 횟수는 1번만 가능합니다.");
-// }
-// function notDuplicate4() {
-//     document.getElementById('button4').onclick = null;
-//     window.alert("제보 횟수는 1번만 가능합니다.");
-// }
-// function notDuplicate5() {
-//     document.getElementById('button5').onclick = null;
-//     window.alert("제보 횟수는 1번만 가능합니다.");
-// }
-// function notDuplicate6() {
-//     document.getElementById('button6').onclick = null;
-//     window.alert("제보 횟수는 1번만 가능합니다.");
-// }
-//
-// function ii() {
-//     var tmpdata = fs.readFileSync("test.json");
-//     alert(tmpdata);
-//
-// }
-
-// export default function ii() {
-//     var fs = require('fs');
-//
-//     var data = '{ "id1": "0","id2": "0","id3": "0","id4": "0","id5": "0","id6": "0" }';
-//     var parsingData = JSON.parse(data);
-//     for (let i = 0; i < parsingData.length; i++) {
-//         countArray[i].addEventListener("click", function () {
-//             if (click_1.onclick) {
-//                 let tmp = (parsingData.id1)++;
-//                 delete parsingData.id1;
-//                 parsingData.id1 = tmp;
-//                 alert("완료");
-//
-//             } else if (click_2.onclick) {
-//                 let tmp = (parsingData.id2)++;
-//                 delete parsingData.id2;
-//                 parsingData.id2 = tmp;
-//                 alert("완료");
-//
-//             } else if (click_3.onclick) {
-//                 let tmp = (parsingData.id3)++;
-//                 delete parsingData.id3;
-//                 parsingData.id3 = tmp;
-//                 alert("완료");
-//             } else if (click_4.onclick) {
-//                 let tmp = (parsingData.id4)++;
-//                 delete parsingData.id4;
-//                 parsingData.id4 = tmp;
-//                 alert("완료");
-//             } else if (click_5.onclick) {
-//                 let tmp = (parsingData.id5)++;
-//                 delete parsingData.id5;
-//                 parsingData.id5 = tmp;
-//                 alert("완료");
-//
-//
-//             } else if (click_6.onclick) {
-//                 let tmp = (parsingData.id6)++;
-//                 delete parsingData.id6;
-//                 parsingData.id6 = tmp;
-//                 alert("완료");
-//             }
-//
-//         });
-//
-//     }
-//     return fs.writeFileSync("test.json", JSON.stringify(parsingData));
-// }
-
-
-// // 제보를 위해 이미지를 클릭한 횟수를 저장할 변수 선언
-// var count1 = 0;
-// var count2 = 0;
-// var count3 = 0;
-// var count4 = 0;
-// var count5 = 0;
-// var count6 = 0;
-// var count_arr = [count1, count2, count3, count4, count5, count6];
-// var button1 = document.getElementById("button1");
-// var button2 = document.getElementById("button2");
-// var button3 = document.getElementById("button3");
-// var button4 = document.getElementById("button4");
-// var button5 = document.getElementById("button5");
-// var button6 = document.getElementById("button6");
-// var textHolder_arr = [button1, button2, button3, button4, button5, button6];
-//
-//
-// // 중복 방지를 위한 함수 정의
-// var doubleSubmitFlag = false;
-//
-// function doubleSubmitCheck() {
-//     if (doubleSubmitFlag) {
-//         return doubleSubmitFlag;
-//     } else {
-//         doubleSubmitFlag = true;
-//         return false;
-//     }
-//
-// }
-//
-//
-// function insert() {
-//
-//
-//     resetData();
-//     button1.addEventListener("click", function () {
-//         if (!doubleSubmitCheck()) {
-//             alert("제보 완료!");
-//             textHolder_arr[0].innerHTML = ++count_arr[0];
-//             window.localStorage.setItem("data1", count_arr[0]);
-//             load();
-//         }
-//
-//        else alert("제보는 1번만 가능합니다.");
-//     });
-//
-//     button2.addEventListener("click", function () {
-//         if (!doubleSubmitCheck()) {
-//             alert("제보 완료!");
-//             textHolder_arr[1].innerHTML = ++count_arr[1];
-//             window.localStorage.setItem("data2", count_arr[1]);
-//             load();
-//         } else alert("제보는 1번만 가능합니다.");
-//
-//     });
-//     button3.addEventListener("click", function () {
-//         if (!doubleSubmitCheck()) {
-//             alert("제보 완료!");
-//             textHolder_arr[2].innerHTML= ++count_arr[2];
-//             window.localStorage.setItem("data3", count_arr[2]);
-//             load();
-//         } else alert("제보는 1번만 가능합니다.");
-//     });
-//     button4.addEventListener("click", function () {
-//         if (!doubleSubmitCheck()) {
-//             alert("제보 완료!");
-//             textHolder_arr[3].innerHTML = ++count_arr[3];
-//             window.localStorage.setItem("data4", count_arr[3]);
-//             load();
-//         } else alert("제보는 1번만 가능합니다.");
-//
-//     });
-//     button5.addEventListener("click", function () {
-//         if (!doubleSubmitCheck()) {
-//             alert("제보 완료!");
-//             textHolder_arr[4].innerHTML = ++count_arr[4];
-//             window.localStorage.setItem("data5", count_arr[4]);
-//             load();
-//         } else alert("제보는 1번만 가능합니다.");
-//
-//     });
-//     button6.addEventListener("click", function () {
-//         if (!doubleSubmitCheck()) {
-//             alert("제보 완료!");
-//
-//             textHolder_arr[5].innerHTML = JSON.stringify(++count_arr[5]);
-//             window.localStorage.setItem("data6", count_arr[5]);
-//             load();
-//         } else alert("제보는 1번만 가능합니다.");
-//
-//     });
-//
-//     function load() {
-//         // const textHolder1 = document.getElementById("count1");
-//         // const textHolder2 = document.getElementById("count2");
-//         // const textHolder3 = document.getElementById("count3");
-//         // const textHolder4 = document.getElementById("count4");
-//         // const textHolder5 = document.getElementById("count5");
-//         // const textHolder6 = document.getElementById("count6");
-//
-//         var arr = [];
-//         var tmp = 0;
-//         const data_1 = window.localStorage.getItem("data1");
-//         const data_2 = window.localStorage.getItem("data2");
-//         const data_3 = window.localStorage.getItem("data3");
-//         const data_4 = window.localStorage.getItem("data4");
-//         const data_5 = window.localStorage.getItem("data5");
-//         const data_6 = window.localStorage.getItem("data6");
-//
-//
-//         arr = [data_1, data_2, data_3, data_4, data_5, data_6];
-//         // 입력값의 최대값 탐색
-//         for (let j = 0; j < arr.length; j++) {
-//             tmp = 0;
-//             if (tmp < arr[j]) {
-//                 tmp = arr[j];
-//             }
-//
-//         }
-//         var file_arr = ['img/icon/cloud2_rainy_icon.png', 'img/icon/cloudy2_icon.png', 'img/icon/sunny_icon.png']
-//         var pictureArr = [];
-//         for (let k = 0; k < textHolder_arr.length; k++) {
-//             if (tmp === textHolder_arr[k]) {
-//                 var initText = document.getElementsByClassName('skhu-turtle');
-//                 pictureArr[k] = new Image();
-//                 pictureArr[k] = file_arr[0];
-//                 initText[k].innerHTML = pictureArr[k];
-//             }
-//
-//         }
-//     }
-//
-//
-// }
-//
-//
-// // 데이터 배열의 최댓값 인덱스를 통해 이미지 파일 배열의 인덱스와 이것이 같다면 이미지 파일을 반환할 이미지 파일배열 정의
-//
-// // 입력값을 메인 페이지에 표시하는 함수
-//
-//
-// function resetData() {
-//     var nowDate = new Date().getHours();
-//     if (nowDate.toString() === "00" && nowDate.toString() === "03" && nowDate.toString() === "06" && nowDate.toString() === "09"
-//         && nowDate.toString() === "12" && nowDate.toString() === "15" && nowDate.toString() === "18" && nowDate.toString() === "21") {
-//         for (let i = 0; i < count_arr.length; i++) {
-//             window.localStorage.removeItem('data1');
-//             window.localStorage.removeItem('data2');
-//             window.localStorage.removeItem('data3');
-//             window.localStorage.removeItem('data4');
-//             window.localStorage.removeItem('data5');
-//             window.localStorage.removeItem('data6');
-//         }
-//     }
-//
-// }
-//
-// // function viewCount(tmp){
-// //     var a = loaded();
-// //     for(let i=0; i<arr.length; i++) {
-// //         if(a === arr[i]) {
-// //             data = document.getElementsByTagName("img");
-// //             return data.appendChild(arr[i]);
-//
-// //         }
-// //     }
-// // }
-//
-//
-// // function notDuplicate1() {
-// //     document.getElementById('button1').onclick = null;
-// //     window.alert("제보 횟수는 1번만 가능합니다.");
-// // }
-// // function notDuplicate2() {
-// //     document.getElementById('button2').onclick = null;
-// //     window.alert("제보 횟수는 1번만 가능합니다.");
-// // }
-// // function notDuplicate3() {
-// //     document.getElementById('button3').onclick = null;
-// //     window.alert("제보 횟수는 1번만 가능합니다.");
-// // }
-// // function notDuplicate4() {
-// //     document.getElementById('button4').onclick = null;
-// //     window.alert("제보 횟수는 1번만 가능합니다.");
-// // }
-// // function notDuplicate5() {
-// //     document.getElementById('button5').onclick = null;
-// //     window.alert("제보 횟수는 1번만 가능합니다.");
-// // }
-// // function notDuplicate6() {
-// //     document.getElementById('button6').onclick = null;
-// //     window.alert("제보 횟수는 1번만 가능합니다.");
-// // }
-// //
-// // function ii() {
-// //     var tmpdata = fs.readFileSync("test.json");
-// //     alert(tmpdata);
-// //
-// // }
-//
-// // export default function ii() {
-// //     var fs = require('fs');
-// //
-// //     var data = '{ "id1": "0","id2": "0","id3": "0","id4": "0","id5": "0","id6": "0" }';
-// //     var parsingData = JSON.parse(data);
-// //     for (let i = 0; i < parsingData.length; i++) {
-// //         countArray[i].addEventListener("click", function () {
-// //             if (click_1.onclick) {
-// //                 let tmp = (parsingData.id1)++;
-// //                 delete parsingData.id1;
-// //                 parsingData.id1 = tmp;
-// //                 alert("완료");
-// //
-// //             } else if (click_2.onclick) {
-// //                 let tmp = (parsingData.id2)++;
-// //                 delete parsingData.id2;
-// //                 parsingData.id2 = tmp;
-// //                 alert("완료");
-// //
-// //             } else if (click_3.onclick) {
-// //                 let tmp = (parsingData.id3)++;
-// //                 delete parsingData.id3;
-// //                 parsingData.id3 = tmp;
-// //                 alert("완료");
-// //             } else if (click_4.onclick) {
-// //                 let tmp = (parsingData.id4)++;
-// //                 delete parsingData.id4;
-// //                 parsingData.id4 = tmp;
-// //                 alert("완료");
-// //             } else if (click_5.onclick) {
-// //                 let tmp = (parsingData.id5)++;
-// //                 delete parsingData.id5;
-// //                 parsingData.id5 = tmp;
-// //                 alert("완료");
-// //
-// //
-// //             } else if (click_6.onclick) {
-// //                 let tmp = (parsingData.id6)++;
-// //                 delete parsingData.id6;
-// //                 parsingData.id6 = tmp;
-// //                 alert("완료");
-// //             }
-// //
-// //         });
-// //
-// //     }
-// //     return fs.writeFileSync("test.json", JSON.stringify(parsingData));
-// // }
