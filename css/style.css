@@ -56,6 +56,12 @@ body{
     color: white;
     text-shadow: 5px 5px 10px black;
 }
+img.Kurumi-icon {
+    width: 6rem;
+    position: absolute;
+    right: 5rem;
+    bottom:74.5rem;
+}
 .text-box{
     border-radius: 33px;
     background-color: white;
@@ -115,7 +121,7 @@ body{
     padding: 0.1em;
     margin: 0px 20px 0px 20px;
 }
-.skhu-turtle{
+#skhu-turtle{
     font-size: xx-large;
     padding: 0.5em 0em 0em 0.7em;
     width: 65%;
