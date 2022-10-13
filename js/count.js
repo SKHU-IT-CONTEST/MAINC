@@ -1,13 +1,39 @@
 // 새로고침을 실행한 경우, 기존 데이터 유지를 위해 window 객체를 활용하여 처리
 
+
 // 제보를 위해 이미지를 클릭한 횟수를 저장할 변수 선언
 
 
 // 중복 방지를 위한 함수 정의
 var doubleSubmitFlag = false;
+function resetData() {
 
+    if (d == null || nowDate - new Date(d) >= 10800000) {
+        for (let i = 0; i < 6; i++) {
+            var countTmp_1 = localStorage.getItem("data1");
+            countTmp_1 = 0;
+            var countTmp_2 = localStorage.getItem("data2");
+            countTmp_2 = 0;
+            var countTmp_3 = localStorage.getItem("data3");
+            countTmp_3 = 0;
+            var countTmp_4 = localStorage.getItem("data4");
+            countTmp_4 = 0;
+            var countTmp_5 = localStorage.getItem("data5");
+            countTmp_5 = 0;
+            var countTmp_6 = localStorage.getItem("data6");
+            countTmp_6 = 0;
+
+            localStorage.setItem("data1", countTmp_1.toString());
+            localStorage.setItem("data2", countTmp_2.toString());
+            localStorage.setItem("data3", countTmp_3.toString());
+            localStorage.setItem("data4", countTmp_4.toString());
+            localStorage.setItem("data5", countTmp_5.toString());
+            localStorage.setItem("data6", countTmp_6.toString());
+        }
+    }
+}
 function doubleSubmitCheck() {
-    if (doubleSubmitFlag) {
+    if (doubleSubmitFlag ) {
         return doubleSubmitFlag;
     } else {
         doubleSubmitFlag = true;
@@ -16,65 +42,29 @@ function doubleSubmitCheck() {
 
 }
 
-function ready() {
-    resetData();
-    var textHolder1 = document.getElementById("count1");
-    var textHolder2 = document.getElementById("count2");
-    var textHolder3 = document.getElementById("count3");
-    var textHolder4 = document.getElementById("count4");
-    var textHolder5 = document.getElementById("count5");
-    var textHolder6 = document.getElementById("count6");
-    textHolder1.innerHTML = localStorage.getItem("data1");
-    textHolder2.innerHTML = localStorage.getItem("data2");
-    textHolder3.innerHTML = localStorage.getItem("data3");
-    textHolder4.innerHTML = localStorage.getItem("data4");
-    textHolder5.innerHTML = localStorage.getItem("data5");
-    textHolder6.innerHTML = localStorage.getItem("data6");
 
-    function resetData() {
-        let nowDate = new Date();
 
-        if (nowDate.getHours() === 0o3 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 0o6 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 9 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 12 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 15 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 18 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 21 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00 ||
-            nowDate.getHours() === 0o0 && nowDate.getMinutes() === 0o0 && nowDate.getSeconds() === 0o0 && nowDate.getMilliseconds() === 0o00) {
-            for (let i = 0; i < 6; i++) {
-                var countTmp_1 = localStorage.getItem("data1");
-                countTmp_1 = 0;
-                var countTmp_2 = localStorage.getItem("data2");
-                countTmp_2 = 0;
-                var countTmp_3 = localStorage.getItem("data3");
-                countTmp_3 = 0;
-                var countTmp_4 = localStorage.getItem("data4");
-                countTmp_4 = 0;
-                var countTmp_5 = localStorage.getItem("data5");
-                countTmp_5 = 0;
-                var countTmp_6 = localStorage.getItem("data6");
-                countTmp_6 = 0;
+var textHolder1 = document.getElementById("count1");
+var textHolder2 = document.getElementById("count2");
+var textHolder3 = document.getElementById("count3");
+var textHolder4 = document.getElementById("count4");
+var textHolder5 = document.getElementById("count5");
+var textHolder6 = document.getElementById("count6");
 
-                localStorage.setItem("data1", countTmp_1.toString());
-                localStorage.setItem("data2", countTmp_2.toString());
-                localStorage.setItem("data3", countTmp_3.toString());
-                localStorage.setItem("data4", countTmp_4.toString());
-                localStorage.setItem("data5", countTmp_5.toString());
-                localStorage.setItem("data6", countTmp_6.toString());
-            }
-        }
-    }
+let d = localStorage.getItem("date");
+let nowDate = new Date();
+resetData();
 
-}
+textHolder1.innerHTML = localStorage.getItem("data1");
+textHolder2.innerHTML = localStorage.getItem("data2");
+textHolder3.innerHTML = localStorage.getItem("data3");
+textHolder4.innerHTML = localStorage.getItem("data4");
+textHolder5.innerHTML = localStorage.getItem("data5");
+textHolder6.innerHTML = localStorage.getItem("data6");
+
 
 function insert() {
-    let count1 = 0;
-    let count2 = 0;
-    let count3 = 0;
-    let count4 = 0;
-    let count5 = 0;
-    let count6 = 0;
+
 
 
     const button1 = document.getElementById("button1");
@@ -91,8 +81,10 @@ function insert() {
     var textHolder6 = document.getElementById("count6");
 
 
+
     button1.addEventListener("click", function () {
-        if (!doubleSubmitCheck()) {
+        if (!doubleSubmitCheck() && (d == null || nowDate - new Date(d) >= 10800000)) {
+            localStorage.setItem("date", nowDate.toString());
             alert("제보 완료!");
             textHolder1.innerHTML = countData1();
         } else
@@ -100,7 +92,8 @@ function insert() {
     });
 
     button2.addEventListener("click", function () {
-        if (!doubleSubmitCheck()) {
+        if (!doubleSubmitCheck() && (d == null || nowDate - new Date(d) >= 10800000)) {
+            localStorage.setItem("date", nowDate.toString());
             alert("제보 완료!");
             textHolder2.innerHTML = countData2();
 
@@ -108,7 +101,8 @@ function insert() {
 
     });
     button3.addEventListener("click", function () {
-        if (!doubleSubmitCheck()) {
+        if (!doubleSubmitCheck() && (d == null || nowDate - new Date(d) >= 10800000)) {
+            localStorage.setItem("date", nowDate.toString());
             alert("제보 완료!");
             textHolder3.innerHTML = countData3();
 
@@ -116,7 +110,8 @@ function insert() {
 
     });
     button4.addEventListener("click", function () {
-        if (!doubleSubmitCheck()) {
+        if (!doubleSubmitCheck() && (d == null || nowDate - new Date(d) >= 10800000)) {
+            localStorage.setItem("date", nowDate.toString());
             alert("제보 완료!");
             textHolder4.innerHTML = countData4();
 
@@ -125,7 +120,8 @@ function insert() {
 
     });
     button5.addEventListener("click", function () {
-        if (!doubleSubmitCheck()) {
+        if (!doubleSubmitCheck() && (d == null || nowDate - new Date(d) >= 10800000)) {
+            localStorage.setItem("date", nowDate.toString());
             alert("제보 완료!");
             textHolder5.innerHTML = countData5();
 
@@ -134,7 +130,8 @@ function insert() {
 
     });
     button6.addEventListener("click", function () {
-        if (!doubleSubmitCheck()) {
+        if (!doubleSubmitCheck() && (d == null || nowDate - new Date(d) >= 10800000)) {
+            localStorage.setItem("date", nowDate.toString());
             alert("제보 완료!");
             textHolder6.innerHTML = countData6();
 
