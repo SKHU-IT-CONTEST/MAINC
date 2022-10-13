@@ -48,7 +48,7 @@ function insert() {
     button1.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder1.innerHTML = ++count_arr[0];
+            textHolder1.innerHTML = (++count_arr[0]).toString();
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
@@ -57,7 +57,7 @@ function insert() {
     button2.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder2.innerHTML = ++count_arr[1];
+            textHolder2.innerHTML = (++count_arr[1]).toString();
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
@@ -65,7 +65,7 @@ function insert() {
     button3.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder3.innerHTML = ++count_arr[2];
+            textHolder3.innerHTML = (++count_arr[2]).toString();
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
@@ -73,7 +73,7 @@ function insert() {
     button4.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder4.innerHTML = ++count_arr[3];
+            textHolder4.innerHTML = (++count_arr[3]).toString();
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
@@ -82,7 +82,7 @@ function insert() {
     button5.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder5.innerHTML = ++count_arr[4];
+            textHolder5.innerHTML = (++count_arr[4]).toString();
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
@@ -91,7 +91,7 @@ function insert() {
     button6.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder6.innerHTML = ++count_arr[5];
+            textHolder6.innerHTML = (++count_arr[5]).toString();
         } else if (doubleSubmitCheck()) {
             alert("제보는 1번만 가능합니다.");
         }
@@ -107,12 +107,12 @@ function insert() {
     var textHolder_arr = [textHolder1, textHolder2, textHolder3, textHolder4, textHolder5, textHolder6];
 
 
-    window.localStorage.setItem("data1", count_arr[0]);
-    window.localStorage.setItem("data2", count_arr[1]);
-    window.localStorage.setItem("data3", count_arr[2]);
-    window.localStorage.setItem("data4", count_arr[3]);
-    window.localStorage.setItem("data5", count_arr[4]);
-    window.localStorage.setItem("data6", count_arr[5]);
+    localStorage.setItem("data1", count_arr[0].toString());
+    localStorage.setItem("data2", count_arr[1].toString());
+    localStorage.setItem("data3", count_arr[2].toString());
+    localStorage.setItem("data4", count_arr[3].toString());
+    localStorage.setItem("data5", count_arr[4].toString());
+    localStorage.setItem("data6", count_arr[5].toString());
     var arr = [];
     resetData();
     let tmp=0;
