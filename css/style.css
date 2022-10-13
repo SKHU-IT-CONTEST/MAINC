@@ -140,7 +140,11 @@ img.Kurumi-icon {
     bottom: 7.2em;
     padding: 0px 0px 0px 7em;
     margin: 0px 0px 0px 0px;
-    height: 15em;
+    height: 15em
+}
+.weather-kicon{
+    width: 9em;
+    height: 9em;
 }
 
 /* 파트3 버튼 스타일 */
