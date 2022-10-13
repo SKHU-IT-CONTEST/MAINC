@@ -281,7 +281,7 @@ img.Kurumi-icon {
 }
 .turtle-sit{
     font-size: 100px;
-    display: flex;
+    display: inline-block;
     width: 100%;
     flex-direction: row;
     flex: 1;
