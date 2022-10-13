@@ -49,52 +49,45 @@ function insert() {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
             textHolder1.innerHTML = (++count_arr[0]).toString();
-        } else if (doubleSubmitCheck()) {
+        } else
             alert("제보는 1번만 가능합니다.");
-        }
     });
 
     button2.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
             textHolder2.innerHTML = (++count_arr[1]).toString();
-        } else if (doubleSubmitCheck()) {
-            alert("제보는 1번만 가능합니다.");
-        }
+        } else alert("제보는 1번만 가능합니다.");
+
     });
     button3.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
             textHolder3.innerHTML = (++count_arr[2]).toString();
-        } else if (doubleSubmitCheck()) {
-            alert("제보는 1번만 가능합니다.");
-        }
+        } else alert("제보는 1번만 가능합니다.");
+
     });
     button4.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
             textHolder4.innerHTML = (++count_arr[3]).toString();
-        } else if (doubleSubmitCheck()) {
-            alert("제보는 1번만 가능합니다.");
-        }
+        } else alert("제보는 1번만 가능합니다.");
+
 
     });
     button5.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
             textHolder5.innerHTML = (++count_arr[4]).toString();
-        } else if (doubleSubmitCheck()) {
-            alert("제보는 1번만 가능합니다.");
-        }
+        } else alert("제보는 1번만 가능합니다.");
+
 
     });
     button6.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
             textHolder6.innerHTML = (++count_arr[5]).toString();
-        } else if (doubleSubmitCheck()) {
-            alert("제보는 1번만 가능합니다.");
-        }
+        } else alert("제보는 1번만 가능합니다.");
 
     });
 
@@ -113,18 +106,12 @@ function insert() {
     localStorage.setItem("data4", count_arr[3].toString());
     localStorage.setItem("data5", count_arr[4].toString());
     localStorage.setItem("data6", count_arr[5].toString());
-    var arr = [];
+    var arr = [count_arr[0], count_arr[1], count_arr[2], count_arr[3], count_arr[4], count_arr[5]];
     resetData();
     let tmp=0;
 
 
 
-    arr.push(data_1);
-    arr.push(data_2);
-    arr.push(data_3);
-    arr.push(data_4);
-    arr.push(data_5);
-    arr.push(data_6);
 
 
     // 입력값의 최대값 탐색
@@ -152,22 +139,22 @@ function insert() {
             }
         }
     }
-    window.onpageshow = function (event) {
-        if(event.persisted || (window.performance && (window.performance.navigation.type === 1 || window.performance.navigation.type === 2))) {
-            if(('localStorage' in window) && window['localStorage'] !== null) {
-                if(localStorage.getItem('data1') && localStorage.getItem('data2') && localStorage.getItem('data3')
-                    && localStorage.getItem('data4') && localStorage.getItem('data5') && localStorage.getItem('data6') ) {
-
-                    window.localStorage.getItem("data1");
-                    window.localStorage.getItem("data2");
-                    window.localStorage.getItem("data3");
-                    window.localStorage.getItem("data4");
-                    window.localStorage.getItem("data5");
-                    window.localStorage.getItem("data6");
-                }
-            }
-        }
-    }
+    // window.onpageshow = function (event) {
+    //     if(event.persisted || (window.performance && (window.performance.navigation.type === 1 || window.performance.navigation.type === 2))) {
+    //         if(('localStorage' in window) && window['localStorage'] !== null) {
+    //             if(localStorage.getItem('data1') && localStorage.getItem('data2') && localStorage.getItem('data3')
+    //                 && localStorage.getItem('data4') && localStorage.getItem('data5') && localStorage.getItem('data6') ) {
+    //
+    //                 window.localStorage.getItem("data1");
+    //                 window.localStorage.getItem("data2");
+    //                 window.localStorage.getItem("data3");
+    //                 window.localStorage.getItem("data4");
+    //                 window.localStorage.getItem("data5");
+    //                 window.localStorage.getItem("data6");
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 
