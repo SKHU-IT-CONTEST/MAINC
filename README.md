@@ -8,5 +8,6 @@
 
 아래 사진은 최종 기획 UI입니다. 
 
-![X](https://user-images.githubusercontent.com/83647215/194799153-62e4c606-62e5-48ad-9ee3-68386135eb18.png)
+![X](https://user-images.githubusercontent.com/83647215/195477159-0abadbb8-fc87-47b1-89bf-97d2b0cafabb.png)
+
 
