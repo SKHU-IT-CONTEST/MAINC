@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+
   <meta charset="UTF-8">
   <title>쿠름이</title>
   <meta name="viewport" content="initial-scale=0.5, width=device-width, user-scalable=no">
@@ -10,9 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Sunflower&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.turtle-sit').trigger('click');
+        }, 1)
+
+    </script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVQY868RD"></script>
-<script src="/js/count.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -20,6 +27,8 @@
 
   gtag('config', 'G-VJVQY868RD');
 </script>
+
+
 </head>
 
 <body>
@@ -41,7 +50,7 @@
       <h2 id="give_tip">
         현재 회대의 날씨를 제보해주세요!
       </h2>
-      <div class="turtle-sit">
+      <div class="turtle-sit" onclick="ready()">
 
               <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
                   <button class="turtle-feel" id='button1' onclick="insert()">
@@ -106,8 +115,9 @@
     <!-- 하단 날씨 제보하기 영역 -->
 
       </div>
-    <script type="text/javascript" src="count.js"></script>
+    <script type="text/javascript" src="js/count.js"></script>
     <script src="js/button.js"></script>
+
 
 <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
 <script type="text/javascript">
@@ -117,5 +127,7 @@ if(window.wcs) {
 wcs_do();
 }
 </script>
+
 </body>
+
 </html>

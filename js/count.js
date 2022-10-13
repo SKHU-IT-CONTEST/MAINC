@@ -1,18 +1,7 @@
 // 새로고침을 실행한 경우, 기존 데이터 유지를 위해 window 객체를 활용하여 처리
 
 
-
-
-
-
 // 제보를 위해 이미지를 클릭한 횟수를 저장할 변수 선언
-let count1 = 0;
-let count2 = 0;
-let count3 = 0;
-let count4 = 0;
-let count5 = 0;
-let count6 = 0;
-var count_arr = [count1, count2, count3, count4, count5, count6];
 
 
 // 중복 방지를 위한 함수 정의
@@ -27,9 +16,28 @@ function doubleSubmitCheck() {
     }
 
 }
-
+function ready() {
+    var textHolder1 = document.getElementById("count1");
+    var textHolder2 = document.getElementById("count2");
+    var textHolder3 = document.getElementById("count3");
+    var textHolder4 = document.getElementById("count4");
+    var textHolder5 = document.getElementById("count5");
+    var textHolder6 = document.getElementById("count6");
+    textHolder1.innerHTML = localStorage.getItem("data1");
+    textHolder2.innerHTML = localStorage.getItem("data2");
+    textHolder3.innerHTML = localStorage.getItem("data3");
+    textHolder4.innerHTML = localStorage.getItem("data4");
+    textHolder5.innerHTML = localStorage.getItem("data5");
+    textHolder6.innerHTML = localStorage.getItem("data6");
+}
 function insert() {
-
+    let count1 = 0;
+    let count2 = 0;
+    let count3 = 0;
+    let count4 = 0;
+    let count5 = 0;
+    let count6 = 0;
+    var count_arr = [0, 0, 0, 0, 0, 0]
 
     const button1 = document.getElementById("button1");
     const button2 = document.getElementById("button2");
@@ -45,10 +53,13 @@ function insert() {
     var textHolder6 = document.getElementById("count6");
 
 
+
+
     button1.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder1.innerHTML = (++count_arr[0]).toString();
+            textHolder1.innerHTML = (++count1).toString();
+            localStorage.setItem("data1", count1.toString());
         } else
             alert("제보는 1번만 가능합니다.");
     });
@@ -56,21 +67,24 @@ function insert() {
     button2.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder2.innerHTML = (++count_arr[1]).toString();
+            textHolder2.innerHTML =(++count2).toString();
+            localStorage.setItem("data2", count2.toString());
         } else alert("제보는 1번만 가능합니다.");
 
     });
     button3.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder3.innerHTML = (++count_arr[2]).toString();
+            textHolder3.innerHTML = (++count3).toString();
+            localStorage.setItem("data3", count3.toString());
         } else alert("제보는 1번만 가능합니다.");
 
     });
     button4.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder4.innerHTML = (++count_arr[3]).toString();
+            textHolder4.innerHTML = (++count4).toString();
+            localStorage.setItem("data4", count4.toString());
         } else alert("제보는 1번만 가능합니다.");
 
 
@@ -78,7 +92,8 @@ function insert() {
     button5.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder5.innerHTML = (++count_arr[4]).toString();
+            textHolder5.innerHTML = (++count5).toString();
+            localStorage.setItem("data5", count5.toString());
         } else alert("제보는 1번만 가능합니다.");
 
 
@@ -86,7 +101,8 @@ function insert() {
     button6.addEventListener("click", function () {
         if (!doubleSubmitCheck()) {
             alert("제보 완료!");
-            textHolder6.innerHTML = (++count_arr[5]).toString();
+            textHolder6.innerHTML = (++count6).toString();
+            localStorage.setItem("data6", (count6).toString());
         } else alert("제보는 1번만 가능합니다.");
 
     });
@@ -100,45 +116,40 @@ function insert() {
     var textHolder_arr = [textHolder1, textHolder2, textHolder3, textHolder4, textHolder5, textHolder6];
 
 
-    localStorage.setItem("data1", count_arr[0].toString());
-    localStorage.setItem("data2", count_arr[1].toString());
-    localStorage.setItem("data3", count_arr[2].toString());
-    localStorage.setItem("data4", count_arr[3].toString());
-    localStorage.setItem("data5", count_arr[4].toString());
-    localStorage.setItem("data6", count_arr[5].toString());
-    var arr = [count_arr[0], count_arr[1], count_arr[2], count_arr[3], count_arr[4], count_arr[5]];
+    var arr = [count1, count2, count3, count4, count5, count6];
     resetData();
-    let tmp=0;
-
-
-
+    let tmp = 0;
 
 
     // 입력값의 최대값 탐색
-    for(let j=0; j<arr.length; j++) {
+    for (let j = 0; j < arr.length; j++) {
         let tmp = 0;
-        if(tmp < arr[j]){
+        if (tmp < arr[j]) {
             tmp = arr[j];
         }
 
     }
 
-    for(let k=0; k<textHolder_arr.length; k++) {
-        if(textHolder_arr[k] === arr[k]) {
+    for (let k = 0; k < textHolder_arr.length; k++) {
+        if (textHolder_arr[k] === arr[k]) {
             const initText = document.getElementById('skhu-turtle');
             initText.appendChild(tmp);
         }
 
     }
+
     function resetData() {
         let nowDate = new Date();
-        if (nowDate.getHours() === 6 || nowDate.getHours() === 12
-            || nowDate.getHours() === 18 || nowDate.getHours() === 0o0) {
+        if (nowDate.getHours() === 0o3 || nowDate.getHours() === 0o6 ||
+            nowDate.getHours() === 9 || nowDate.getHours() === 12||
+            nowDate.getHours() === 15 ||  nowDate.getHours() === 18
+            || nowDate.getHours() === 21 || nowDate.getHours() === 0o0) {
             for (let i = 0; i < count_arr.length; i++) {
-                count_arr[i] = 0;
+                count1 = 0; count2 = 0; count3 = 0; count4 = 0; count5 = 0; count6 = 0;
             }
         }
     }
+
     // window.onpageshow = function (event) {
     //     if(event.persisted || (window.performance && (window.performance.navigation.type === 1 || window.performance.navigation.type === 2))) {
     //         if(('localStorage' in window) && window['localStorage'] !== null) {
@@ -156,7 +167,6 @@ function insert() {
     //     }
     // }
 }
-
 
 
 // 입력값을 메인 페이지에 표시하는 함수
@@ -252,9 +262,6 @@ function insert() {
 //     }
 //     return fs.writeFileSync("test.json", JSON.stringify(parsingData));
 // }
-
-
-
 
 
 // // 제보를 위해 이미지를 클릭한 횟수를 저장할 변수 선언
