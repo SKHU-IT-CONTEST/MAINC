@@ -86,14 +86,14 @@ const reIndex3 =`${year}${month}${day}.${hours3}00`;
         el.innerHTML="강수량(mm): "+json[reIndex1].RN1
         
         //아이콘
-         const element11 = document.querySelector('#weatherimg1');
-         console.log(SKY, PTY);
-         const code = `${SKY}${PTY}`;
-         const weatherIconMap = {
-             10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
-         };
-         console.log(weatherIconMap);
-         element11.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
+        const element11 = document.querySelector('#weatherimg1');
+        console.log(SKY, PTY);
+        const code = `${SKY}${PTY}`;
+        const weatherIconMap = {
+            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+        };
+        console.log(weatherIconMap);
+        element11.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
     })
 
 //2시간 후
@@ -115,14 +115,14 @@ const reIndex3 =`${year}${month}${day}.${hours3}00`;
         el.innerHTML="강수량(mm): "+json[reIndex2].RN1
         
         //아이콘
-         const element22 = document.querySelector('#weatherimg2');
-         console.log(SKY, PTY);
-         const code =`${SKY}${PTY}`;
-         const weatherIconMap = {
-             10: 'sun',11: 'sun',41: 'rain',42: 'rain',45: 'rain',31: 'rain',32: 'rain',35: 'rain',30: 'cloud',40: 'cloud',33: 'snow',36: 'snow',37: 'snow',43: 'snow',46: 'snow',47: 'snow',
-         };
-         console.log(weatherIconMap);
-         element22.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
+        const element22 = document.querySelector('#weatherimg2');
+        console.log(SKY, PTY);
+        const code = `${SKY}${PTY}`;
+        const weatherIconMap = {
+            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+        };
+        console.log(weatherIconMap);
+        element22.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
     })
 
 //3시간 후
