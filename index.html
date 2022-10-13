@@ -21,10 +21,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
+
+    <script src="js/view.js"></script>
   <script src="js/schoolNotice.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/count.js"></script>
+
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $(".turtle-icon1").trigger('click');
+        }, 100)
+
+    </script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVQY868RD"></script>
 <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
@@ -104,7 +113,7 @@
         </span>
 
         <!-- 회부기 아이콘 -->
-        <span class="turtle-icon" id="turtle-icon" style="width: 16em;">
+        <span class="turtle-icon" id="turtle-icon" style="width: 16em;" onclick="viewMaxCount()">
         </span>
         <!-- 회부기 아이콘 -->
 
@@ -220,6 +229,8 @@ wcs_do();
 }
 </script>
 </body>
+<script src="js/view.js"></script>
 <script src="js/weather.js"></script>
+
 
 </html>
