@@ -1,6 +1,5 @@
 // 새로고침을 실행한 경우, 기존 데이터 유지를 위해 window 객체를 활용하여 처리
 
-
 // 제보를 위해 이미지를 클릭한 횟수를 저장할 변수 선언
 
 
@@ -16,7 +15,6 @@ function doubleSubmitCheck() {
     }
 
 }
-
 
 function ready() {
     resetData();

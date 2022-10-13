@@ -56,12 +56,6 @@ body{
     color: white;
     text-shadow: 5px 5px 10px black;
 }
-img.Kurumi-icon {
-    width: 6rem;
-    position: absolute;
-    right: 5rem;
-    bottom:74.5rem;
-}
 .text-box{
     border-radius: 33px;
     background-color: white;
@@ -246,7 +240,13 @@ img.Kurumi-icon {
 .text-tip{
     font-size: 2.5rem;
 }
-
+img.Kurumi-icon{
+    position: absolute;
+    width: 3em;
+}
+.title-box{
+    display: inline-flex;
+}
 /* 하단 날씨 제보하기 영역 */
 
 /* 날씨제보 html 영역 */
