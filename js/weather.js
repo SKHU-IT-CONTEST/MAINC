@@ -37,7 +37,7 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         el.innerHTML=json[reIndex].REH
     })
 
-//모바일 확인 js 코드
+    //모바일 확인 js 코드
 function detectMobileDevice(agent) {
     const mobileRegex = [
         /Android/i,
@@ -47,7 +47,7 @@ function detectMobileDevice(agent) {
         /BlackBerry/i,
         /Windows Phone/i
     ]
-
+ 
     return mobileRegex.some(mobile => agent.match(mobile))
 }
 
@@ -60,7 +60,6 @@ if (isMobile) {
 }
 
 //연주님 파트
-//front-part_2, 1차 개선(fetch를 한번만 사용하여 데이터를 불러옴)
 const hours1 = String(date.getHours()+1).padStart(2, "0"); 
 const hours2 = String(date.getHours()+2).padStart(2, "0"); 
 const hours3 = String(date.getHours()+3).padStart(2, "0"); 
@@ -68,10 +67,12 @@ const reIndex1 =`${year}${month}${day}.${hours1}00`;
 const reIndex2 =`${year}${month}${day}.${hours2}00`;
 const reIndex3 =`${year}${month}${day}.${hours3}00`;
 
-fetch('https://api3.skhuweather.kro.kr/getWeather')
+//1시간 후
+    fetch('https://api3.skhuweather.kro.kr/getWeather')
     .then(response => response.json())
     .then(json => {
-        const {T1H,PTY, SKY,RN1} = json[reIndex];
+        const {T1H, PTY, SKY} = json[reIndex1];
+        
         console.log(date.getHours()+1+"시")
         el = document.querySelector('.tmwt #time1')
         el.innerHTML=date.getHours()+1+"시"
@@ -83,11 +84,28 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         console.log("강수량(mm): "+json[reIndex1].RN1)
         el = document.querySelector('#precipitation1')
         el.innerHTML="강수량(mm): "+json[reIndex1].RN1
+        
+        //아이콘
+         const element11 = document.querySelector('#weatherimg1');
+         console.log(SKY, PTY);
+         const code = `${SKY}${PTY}`;
+         const weatherIconMap = {
+             10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+         };
+         console.log(weatherIconMap);
+         element11.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
+    })
 
+//2시간 후
+    fetch('https://api3.skhuweather.kro.kr/getWeather')
+    .then(response => response.json())
+    .then(json => {
+        const {T1H, PTY, SKY} = json[reIndex2];
+        
         console.log(date.getHours()+2+"시")
         el = document.querySelector('.tmwt #time2')
         el.innerHTML=date.getHours()+2+"시"
-
+        
         console.log(json[reIndex2].T1H+"도")
         el = document.querySelector('.tmwt #tem2')
         el.innerHTML=json[reIndex2].T1H+"도"
@@ -95,29 +113,43 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         console.log("강수량(mm): "+json[reIndex2].RN1)
         el = document.querySelector('#precipitation2')
         el.innerHTML="강수량(mm): "+json[reIndex2].RN1
-
-        console.log(date.getHours()+3+"시")
-        el = document.querySelector('.tmwt #time3')
-        el.innerHTML=date.getHours()+3+"시"
-
-        console.log(json[reIndex3].T1H+"도")
-        el = document.querySelector('.tmwt #tem3')
-        el.innerHTML=json[reIndex3].T1H+"도"
-
-        console.log("강수량(mm): "+json[reIndex3].RN1)
-        el = document.querySelector('#precipitation3')
-        el.innerHTML="강수량(mm): "+json[reIndex3].RN1
-
+        
         //아이콘
-         const element1 = document.querySelector('#weatherimg1');
-         const element2 = document.querySelector('#weatherimg2');
-         const element3 = document.querySelector('#weatherimg3');
+         const element22 = document.querySelector('#weatherimg2');
          console.log(SKY, PTY);
          const code =`${SKY}${PTY}`;
          const weatherIconMap = {
              10: 'sun',11: 'sun',41: 'rain',42: 'rain',45: 'rain',31: 'rain',32: 'rain',35: 'rain',30: 'cloud',40: 'cloud',33: 'snow',36: 'snow',37: 'snow',43: 'snow',46: 'snow',47: 'snow',
          };
          console.log(weatherIconMap);
-         element1.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
+         element22.innerHTML=`<img src="img/${weatherIconMap[code]}.svg"/>`;
+    })
 
+//3시간 후
+    fetch('https://api3.skhuweather.kro.kr/getWeather')
+    .then(response => response.json())
+    .then(json => {
+        const {T1H, PTY, SKY} = json[reIndex3];
+        
+        console.log(date.getHours()+3+"시")
+        el = document.querySelector('.tmwt #time3')
+        el.innerHTML=date.getHours()+3+"시"
+        
+        console.log(json[reIndex3].T1H+"도")
+        el = document.querySelector('.tmwt #tem3')
+        el.innerHTML=json[reIndex3].T1H+"도"
+        
+        console.log("강수량(mm): "+json[reIndex3].RN1)
+        el = document.querySelector('#precipitation3')
+        el.innerHTML="강수량(mm): "+json[reIndex3].RN1
+        
+        //아이콘
+         const element33 = document.querySelector('#weatherimg3');
+         console.log(SKY, PTY);
+         const code = `${SKY}${PTY}`;
+         const weatherIconMap = {
+             10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+         };
+         console.log(weatherIconMap);
+         element33.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
     })
