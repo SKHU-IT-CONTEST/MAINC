@@ -21,7 +21,7 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         console.log(SKY, PTY);
         const code = `${SKY}${PTY}`;
         const weatherIconMap = {
-            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloudy',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
         };
         console.log(weatherIconMap);
         element1.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
@@ -90,7 +90,7 @@ const reIndex3 =`${year}${month}${day}.${hours3}00`;
         console.log(SKY, PTY);
         const code = `${SKY}${PTY}`;
         const weatherIconMap = {
-            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloudy',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
         };
         console.log(weatherIconMap);
         element11.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
@@ -119,7 +119,7 @@ const reIndex3 =`${year}${month}${day}.${hours3}00`;
         console.log(SKY, PTY);
         const code = `${SKY}${PTY}`;
         const weatherIconMap = {
-            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+            10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloudy',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
         };
         console.log(weatherIconMap);
         element22.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
@@ -148,7 +148,7 @@ const reIndex3 =`${year}${month}${day}.${hours3}00`;
          console.log(SKY, PTY);
          const code = `${SKY}${PTY}`;
          const weatherIconMap = {
-             10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloud',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
+             10: 'ksun',11: 'ksun',41: 'cloudyRain2',42: 'cloudyRain2',45: 'cloudyRain2',31: 'krain',32: 'krain',35: 'krain',30: 'kcloudy',40: 'kcloudy',33: 'ksnow',36: 'ksnow',37: 'ksnow',43: 'cloudySnow2',46: 'cloudySnow2',47: 'cloudySnow2',
          };
          console.log(weatherIconMap);
          element33.innerHTML=`<img class="weather-kicon" src="img/icon/${weatherIconMap[code]}.png"/>`;
