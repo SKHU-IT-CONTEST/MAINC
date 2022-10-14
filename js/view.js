@@ -21,25 +21,25 @@ for (let j = 0; j < 6; j++) {
     if (front_arr[j] === tmp) {
         console.log("test");
         if (j === 0) {
-            element1.innerHTML = "<img src = './img/report/report_rainy.png' style='width: 150px;'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/rainy_kurumi.png' style='width: 150px;'>" ;
         }
         else if(j === 1) {
-            element1.innerHTML = "<img src = './img/report/report_cloudy.png' style='width: 150px;'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/cloudy_kurumi.png' style='width: 150px;'>" ;
         }
         else if(j===2) {
-            element1.innerHTML = "<img src = './img/report/report_sunny.png' style='width: 150px;'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/sunny_kurumi.png' style='width: 150px;'>" ;
         }
         else if(j === 3) {
-            element1.innerHTML = "<img src = './img/report/report_dust.png' style='width: 150px;'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/dust_kurumi.png' style='width: 150px;'>" ;
         }
         else if(j === 4) {
-            element1.innerHTML = "<img src = './img/report/report_windy.png' style='width: 150px;'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/windy_kurumi.png' style='width: 150px;'>" ;
         }
         else if(j === 5){
-            element1.innerHTML = "<img src = './img/report/report_snow.png' style='width: 150px;'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/snow_kurumi.png' style='width: 150px;'>" ;
         }
         else{
-            element1.innerHTML = "<img src = './img/report/default.png'>" ;
+            element1.innerHTML = "<img src = './img/kurumi/sunny_kurumi.png'style='width: 150px;'>" ;
         }
         break;
     }
