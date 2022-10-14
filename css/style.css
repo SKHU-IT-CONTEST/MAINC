@@ -30,13 +30,14 @@ body{
 }
 #head-in{
     padding-top: 8px;
-    font-size: 38px;
+    font-size: 2.2em;
     font-family: 'SeoulNamsanM';
     margin: 0px 40px 10px 40px;
     box-shadow: 0px 5px 10px grey;
     background-color: white;
     border-radius: 25px;
     padding: 0.5em 0.5em 0.5em 1em;
+    width: -webkit-fill-available;
 }
 .material-icons {
     font-family: 'Material Icons';
@@ -92,10 +93,6 @@ body{
     font-size: xx-large;
 }
 .weather-icon{
-    position: relative;
-    top: 1.375rem;
-    right: 2.5rem;
-    padding-right: 0px;
     height: 11em;
 }
 .temp-box{
@@ -241,11 +238,7 @@ body{
     font-size: 2.5rem;
 }
 img.Kurumi-icon{
-    position: absolute;
     width: 3em;
-}
-.title-box{
-    display: inline-flex;
 }
 /* 하단 날씨 제보하기 영역 */
 
