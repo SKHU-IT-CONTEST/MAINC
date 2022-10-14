@@ -3,129 +3,122 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <title>쿠름이</title>
-  <meta name="viewport" content="initial-scale=0.5, width=device-width, user-scalable=no">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sunflower&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <title>쿠름이</title>
+    <meta name="viewport" content="initial-scale=0.5, width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVQY868RD"></script>
     <script>
-        setTimeout(function () {
-            $('.turtle-sit').trigger('click');
-        }, 1);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-VJVQY868RD');
     </script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVQY868RD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VJVQY868RD');
-</script>
 
 
 </head>
 
 <body>
-    <!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
-    <!-- 맨 위에 제목 부분 -->
-    <div id="header2">
-      <p id="head-in2">성공회대학교 날씨제공 서비스<br>
-      <span style="font-weight:bolder;">
+<!--제목부터 part1까지 묶었어요. 여기 날씨 정보 박스 밑에 part2 공지사항 넣어주세욤-->
+<!-- 맨 위에 제목 부분 -->
+<div id="header2">
+    <p id="head-in2">성공회대학교 날씨제공 서비스<br>
+        <span style="font-weight:bolder;">
         KURUMI
       </span>
-      <span>
+        <span>
         <img class="Kurumi-icon" src="img/mainkurumi.svg">
       </span>
-      </p>
-    </div>
-    <!-- 맨 위에 제목 부분 -->
-    <!-- 날씨 제보 박스 -->
-    <div class="icon-box">
-      <h2 id="give_tip">
+    </p>
+</div>
+<!-- 맨 위에 제목 부분 -->
+<!-- 날씨 제보 박스 -->
+<div class="icon-box">
+    <h2 id="give_tip">
         현재 회대의 날씨를 제보해주세요!
-      </h2>
-      <div class="turtle-sit" onclick="ready()">
+    </h2>
+    <div class="turtle-sit">
+        <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
+            <button class="turtle-feel" id='button1' onclick="insert()">
+                <img src="img/report/report_rainy.png" style="width:150px;" id="Img1"><span id="count1">0</span></button>
+            <br>
+            비가 와요
+        </li>
+        <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
+            <button class="turtle-feel" id='button2' onclick="insert()">
+                <img src="img/report/report_cloudy.png" style="width:150px;" id="Img2"><span id="count2">0</span></button>
+            <br>
+            흐려요
+        </li>
+        <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
+            <button class="turtle-feel" id='button3' onclick="insert()">
+                <img src="img/report/report_sunny.png" style="width:150px;" id="Img3"><span id="count3">0</span></button>
+            <br>
+            화창해요
+        </li>
+        <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
+            <button class="turtle-feel" id='button4' onclick="insert()">
+                <img src="img/report/report_dust.png" style="width:150px;" id="Img4"><span id="count4">0</span></button>
+            <br>
+            공기가 나빠요
+        </li>
+        <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
+            <button class="turtle-feel" id='button5' onclick="insert()">
+                <img src="img/report/report_windy.png" style="width:150px;" id="Img5"><span id="count5">0</span></button>
+            <br>
+            바람이 불어요
+        </li>
+        <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
+            <button class="turtle-feel" id='button6' onclick="insert()">
+                <img src="img/report/report_snow.png" style="width:150px;" id="Img6"><span id="count6">0</span></button>
+            <br>
+            눈이 와요
+        </li>
 
-              <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
-                  <button class="turtle-feel" id='button1' onclick="insert()">
-                      <img src="img/report/report_rainy.png" style="width:150px;" id="Img1"><span id="count1">0</span></button>
-                  <br>
-                  비가 와요
-              </li>
-              <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
-                  <button class="turtle-feel" id='button2' onclick="insert()">
-                      <img src="img/report/report_cloudy.png" style="width:150px;" id="Img2"><span id="count2">0</span></button>
-                  <br>
-                  흐려요
-              </li>
-              <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
-                  <button class="turtle-feel" id='button3' onclick="insert()">
-                      <img src="img/report/report_sunny.png" style="width:150px;" id="Img3"><span id="count3">0</span></button>
-                  <br>
-                  화창해요
-              </li>
-              <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
-                  <button class="turtle-feel" id='button4' onclick="insert()">
-                      <img src="img/report/report_dust.png" style="width:150px;" id="Img4"><span id="count4">0</span></button>
-                  <br>
-                  공기가 나빠요
-              </li>
-              <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
-                  <button class="turtle-feel" id='button5' onclick="insert()">
-                      <img src="img/report/report_windy.png" style="width:150px;" id="Img5"><span id="count5">0</span></button>
-                  <br>
-                  바람이 불어요
-              </li>
-              <li class="turtle-feel" style="font-size:0.3em; text-align: center;">
-                  <button class="turtle-feel" id='button6' onclick="insert()">
-                      <img src="img/report/report_snow.png" style="width:150px;" id="Img6"><span id="count6">0</span></button>
-                  <br>
-                  눈이 와요
-              </li>
-
-      </div>
     </div>
-    <!-- 날씨 제보 박스 -->
+</div>
+<!-- 날씨 제보 박스 -->
 
-    <!--동아리 모집 링크-->
-    <a href="https://everytime.kr/367581" target="_blank">
-      <img src="img/dongari.png" width="92%" height="220px;" style="text-align: center; margin: auto;  display : block; padding-bottom: 50px;">
-    </a>
-    <!--동아리 모집 링크-->
+<!--동아리 모집 링크-->
+<a href="https://everytime.kr/367581" target="_blank">
+    <img src="img/dongari.png" width="92%" height="220px;" style="text-align: center; margin: auto;  display : block; padding-bottom: 50px;">
+</a>
+<!--동아리 모집 링크-->
 
-    <!-- 하단 날씨 제보하기 영역 -->
-    <div class="padding2">
-    </div>
-      <div class="foot2">
-        <button id="weather-tip2" type="button" onclick="location.href='/index.html';">
+<!-- 하단 날씨 제보하기 영역 -->
+<div class="padding2">
+</div>
+<div class="foot2">
+    <button id="weather-tip2" type="button" onclick="location.href='/';">
           <span class="material-icons-back" style="font-size: 100px; margin-right: 60px; ">
             fast_rewind
           </span>
-          <span class="text-tip">
+        <span class="text-tip">
             성공회대 날씨 정보로 돌아가기
           </span>
-        </button>
+    </button>
 
     <!-- 하단 날씨 제보하기 영역 -->
 
-      </div>
-    <script type="text/javascript" src="js/count.js"></script>
-    <script src="js/button.js"></script>
+</div>
+<script type="text/javascript" src="js/count.js"></script>
+<script src="js/button.js"></script>
 
 
 <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
 <script type="text/javascript">
-if(!wcs_add) var wcs_add = {};
-wcs_add["wa"] = "d4c134537ca6e0";
-if(window.wcs) {
-wcs_do();
-}
+    if(!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "d4c134537ca6e0";
+    if(window.wcs) {
+        wcs_do();
+    }
 </script>
 
 </body>

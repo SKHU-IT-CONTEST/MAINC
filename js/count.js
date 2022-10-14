@@ -6,7 +6,48 @@
 
 // 중복 방지를 위한 함수 정의
 var doubleSubmitFlag = false;
+
+function doubleSubmitCheck() {
+    if (doubleSubmitFlag ) {
+        return doubleSubmitFlag;
+    } else {
+        doubleSubmitFlag = true;
+        return false;
+    }
+
+}
+if((localStorage.getItem("data1") !== null) || (localStorage.getItem("data2") !== null) || (localStorage.getItem("data3") != null) ||
+    (localStorage.getItem("data4") !== null) || (localStorage.getItem("data5") !== null) || (localStorage.getItem("data6") !== null)) {
+    var textHolder1 = document.getElementById("count1");
+    var textHolder2 = document.getElementById("count2");
+    var textHolder3 = document.getElementById("count3");
+    var textHolder4 = document.getElementById("count4");
+    var textHolder5 = document.getElementById("count5");
+    var textHolder6 = document.getElementById("count6");
+
+    let d = localStorage.getItem("date");
+    let nowDate = new Date();
+    resetData();
+
+    textHolder1.innerHTML = localStorage.getItem("data1");
+    textHolder2.innerHTML = localStorage.getItem("data2");
+    textHolder3.innerHTML = localStorage.getItem("data3");
+    textHolder4.innerHTML = localStorage.getItem("data4");
+    textHolder5.innerHTML = localStorage.getItem("data5");
+    textHolder6.innerHTML = localStorage.getItem("data6");
+}
+
+
+
+
+
+
+
+
+
 function resetData() {
+    let d = localStorage.getItem("date");
+    let nowDate = new Date();
 
     if (d == null || nowDate - new Date(d) >= 10800000) {
         for (let i = 0; i < 6; i++) {
@@ -32,40 +73,10 @@ function resetData() {
         }
     }
 }
-function doubleSubmitCheck() {
-    if (doubleSubmitFlag ) {
-        return doubleSubmitFlag;
-    } else {
-        doubleSubmitFlag = true;
-        return false;
-    }
-
-}
-
-
-
-var textHolder1 = document.getElementById("count1");
-var textHolder2 = document.getElementById("count2");
-var textHolder3 = document.getElementById("count3");
-var textHolder4 = document.getElementById("count4");
-var textHolder5 = document.getElementById("count5");
-var textHolder6 = document.getElementById("count6");
-
-let d = localStorage.getItem("date");
-let nowDate = new Date();
-resetData();
-
-textHolder1.innerHTML = localStorage.getItem("data1");
-textHolder2.innerHTML = localStorage.getItem("data2");
-textHolder3.innerHTML = localStorage.getItem("data3");
-textHolder4.innerHTML = localStorage.getItem("data4");
-textHolder5.innerHTML = localStorage.getItem("data5");
-textHolder6.innerHTML = localStorage.getItem("data6");
-
-
 function insert() {
 
-
+    let d = localStorage.getItem("date");
+    let nowDate = new Date();
 
     const button1 = document.getElementById("button1");
     const button2 = document.getElementById("button2");
