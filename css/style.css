@@ -128,14 +128,15 @@ body{
 
 .turtle-icon{
     position: relative;
-    bottom: 7.2em;
+    bottom: 3.2em;
     padding: 0px 0px 0px 7em;
     margin: 0px 0px 0px 0px;
-    height: 15em
+    height: 15em;
+    left: 2em;
 }
 .weather-kicon{
-    width: 9em;
     height: 9em;
+    position: relative;
 }
 
 /* 파트3 버튼 스타일 */
