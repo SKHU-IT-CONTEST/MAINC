@@ -5,7 +5,7 @@
 
 
 // 중복 방지를 위한 함수 정의
-var doubleSubmitFlag = false;
+let doubleSubmitFlag = false;
 
 function doubleSubmitCheck() {
     if (doubleSubmitFlag ) {
@@ -25,8 +25,7 @@ if((localStorage.getItem("data1") !== null) || (localStorage.getItem("data2") !=
     var textHolder5 = document.getElementById("count5");
     var textHolder6 = document.getElementById("count6");
 
-    let d = localStorage.getItem("date");
-    let nowDate = new Date();
+
     resetData();
 
     textHolder1.innerHTML = localStorage.getItem("data1");
