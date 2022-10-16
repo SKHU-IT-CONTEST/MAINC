@@ -124,7 +124,7 @@ fetch('https://api3.skhuweather.kro.kr/getWeather')
         if(tmpStr2 === "24시") {
             tmpStr2 = "00시"
         }
-        else if(tmpStr === "25시") {
+        else if(tmpStr2 === "25시") {
             tmpStr2 = "01시"
         }
         el = document.querySelector('.tmwt #time2')
