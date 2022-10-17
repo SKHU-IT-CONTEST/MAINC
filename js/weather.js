@@ -64,16 +64,16 @@ let reIndex1 = `${year}${month}${day}.${hours1}00`;
 let reIndex2 = `${year}${month}${day}.${hours2}00`;
 let reIndex3 = `${year}${month}${day}.${hours3}00`;
 
-if(reIndex3.slice(9, 11) === "24") {
-    reIndex3 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0)}00`;
+if(reIndex3.slice(9, 11) === "24" || reIndex3.slice(9, 11) === "00") {
+    reIndex3 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0) + String(0)}00`;
 }
 
-if(reIndex3.slice(9, 11 )=== "25") {
+if(reIndex3.slice(9, 11 )=== "25" || reIndex3.slice(9, 11) === "01") {
     reIndex2 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0) + String(0)}00`;
     reIndex3 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0) + String(1)}00`;
 }
 
-if(reIndex3.slice(9, 11) === "26") {
+if(reIndex3.slice(9, 11) === "26" || reIndex3.slice(9, 11) === "02") {
     reIndex1 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0) + String(0)}00`;
     reIndex2 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0) + String(1)}00`;
     reIndex3 = `${year}${month}${String(Number(day) + Number(1))}.${String(0o0) + String(2)}00`;

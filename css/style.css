@@ -333,6 +333,48 @@ ul{
     border: 0;
     background-color:transparent;
 }
+.button1{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    border: 0;
+    background-color:transparent;
+}
+.button2{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    border: 0;
+    background-color:transparent;
+}
+.button3{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    border: 0;
+    background-color:transparent;
+}
+.button4{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    border: 0;
+    background-color:transparent;
+}
+.button5{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    border: 0;
+    background-color:transparent;
+}
+.button6{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    border: 0;
+    background-color:transparent;
+}
 .padding2 {
     height: 175px
 }
