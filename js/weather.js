@@ -55,7 +55,7 @@ isMobile = detectMobileDevice(window.navigator.userAgent)
 if (isMobile) {
     true
 } else {
-    alert('쿠름이는 모바일 접속을 권장합니다!')
+    alert('쿠름이는 모바일 접속을 권장합니다!');
 }
 const hours1 = String(date.getHours() + 1).padStart(2, "0");
 const hours2 = String(date.getHours() + 2).padStart(2, "0");
